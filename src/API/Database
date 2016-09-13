@@ -1,0 +1,17 @@
+-- USER
+userID
+email
+username
+password
+mobile number
+address
+- FOLLOWING : [followingusers]
+
+-- POST
+postID
+text
+date
+user
+location
+likes
+

@@ -1,0 +1,29 @@
+[
+  {
+    "userId": 1,
+    "id": 1,
+    "username": "Ariel Conde",
+    "date": "9/13/2016",
+    "location": "Manila, PH",
+    "body": "Ohh, fck it, basa na naman ako.",
+    "likes": 2,
+  },
+  {
+    "userId": 2,
+    "id": 2,
+    "username": "Jed Garcia",
+    "date": "9/13/2016",
+    "location": "Manila, PH",
+    "body": "Erap suspend na please.",
+    "likes": 2,
+  },
+  {
+    "userId": 3,
+    "id": 3,
+    "username": "Red Periabras",
+    "date": "9/13/2016",
+    "location": "Manila, PH",
+    "body": "Lol, di na ako papasok",
+    "likes": 0,
+  },
+]
