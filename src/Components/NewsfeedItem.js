@@ -4,16 +4,25 @@ import {
   StyleSheet,
   Text,
   View,
-  Image
+  Image,
+  TouchableOpacity,
 } from 'react-native';
 import {Scene, Router, Actions} from 'react-native-router-flux';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 
 export default class NewsfeedItem extends Component {
+
+  togglePost(news) {
+    Actions.post({
+      news: news
+    });
+  }
+
   render() {
     return (
-      <View style={styles.container}>
+      <TouchableOpacity style={styles.container} onPress={() => this.togglePost(this.props.news)}>
+        <View>
         <View style={styles.userinfo}>
           <Image
             source={require('../assets/user.jpg')}
@@ -39,7 +48,8 @@ export default class NewsfeedItem extends Component {
         <Text style={styles.text}>
           {this.props.comment}
         </Text>
-      </View>
+        </View>
+      </TouchableOpacity>
     );
   }
 }

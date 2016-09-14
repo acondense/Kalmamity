@@ -5,13 +5,16 @@ import {
   Text,
   View,
   ListView,
-  RefreshControl
+  RefreshControl,
+  Dimensions
 } from 'react-native';
 import {Scene, Router, Actions} from 'react-native-router-flux';
 
-import NewsfeedItem from '../Components/NewsfeedItem';
+import MessageItem from './MessageItem';
 
-export default class RefreshableList extends Component {
+var width = Dimensions.get('window').width;
+
+export default class RefreshableNewsfeed extends Component {
   constructor(props) {
     super(props);
     var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
@@ -19,21 +22,8 @@ export default class RefreshableList extends Component {
       refreshing: false,
       dataSource: ds.cloneWithRows(['row 1', 'row 2', 'row3']),
     };
-  }
-
-  componentWillMount() {
-    fetch('https://facebook.github.io/react-native/movies.json')
-      .then((response) => response.json())
-      .then((responseJson) => {
-        this.setState({refreshing: false});
-        var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-        this.setState({dataSource: ds.cloneWithRows(responseJson.movies)});
-        console.log(responseJson.movies);
-      })
-      .catch((error) => {
-        this.setState({refreshing: false});
-        console.error(error);
-      });
+    this.itemsRef = {};
+    // firebaseApp.database().ref("/users").set("23");
   }
 
   _onRefresh() {
@@ -44,7 +34,7 @@ export default class RefreshableList extends Component {
         this.setState({refreshing: false});
         var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
         this.setState({dataSource: ds.cloneWithRows(responseJson)});
-        console.log(responseJson);
+        // console.log(responseJson);
       })
       .catch((error) => {
         this.setState({refreshing: false});
@@ -52,11 +42,23 @@ export default class RefreshableList extends Component {
       });
   }
 
+  toggleMessage() {
+    console.log("called from refreshable messsages");
+    this.props.toggleMessage();
+  }
+
+  renderRow(rowData) {
+    return (
+      <MessageItem style={{flex: 1}} message={rowData} key={rowData.userId} />
+    )
+  }
+
   render() {
     return (
       <ListView
-        dataSource={this.state.dataSource}
-        renderRow={(rowData) => <NewsfeedItem title={rowData.title} key={rowData.title} />}
+        style={styles.container}
+        dataSource={this.props.messages}
+        renderRow={this.renderRow.bind(this)}
         refreshControl={
           <RefreshControl
             refreshing={this.state.refreshing}
@@ -71,10 +73,8 @@ export default class RefreshableList extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    width: width,
+    backgroundColor: "#ecf0f1",
   },
   welcome: {
     fontSize: 20,

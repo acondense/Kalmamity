@@ -17,13 +17,15 @@ import RefreshableNewsfeed from '../Components/RefreshableNewsfeed';
 
 import posts from '../API/StubsAPI/posts.json';
 
-export default class Newsfeed extends Component {
+export default class Alertfeed extends Component {
 
   constructor() {
     super();
     this.state = {
       isFollowingActive: true,
       isAroundActive: false,
+      feedFollowing: {title: "HEY FEED"},
+      feedAround: {title: "HEY AROUND"}
     }
   }
 
@@ -102,7 +104,7 @@ export default class Newsfeed extends Component {
             <Text  style={this.state.isFollowingActive? styles.tabTextActive : styles.tabText}>FOLLOWING</Text>
           </TouchableOpacity>
           <TouchableOpacity style={this.state.isAroundActive ? styles.tabAroundActive : styles.tabAround} onPress={this.showAround.bind(this)}>
-            <Text style={this.state.isAroundActive? styles.tabTextActive : styles.tabText}>NEARBY</Text>
+            <Text style={this.state.isAroundActive? styles.tabTextActive : styles.tabText}>AROUND</Text>
           </TouchableOpacity>
         </View>
         {this.renderFeed()}

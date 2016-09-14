@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -14,25 +8,24 @@ import {
 } from 'react-native';
 import {Scene, Router, Actions, ActionConst} from 'react-native-router-flux';
 import ScrollableTabView from 'react-native-scrollable-tab-view';
-import Profile from './Profile';
+
 import Newsfeed from './Newsfeed';
+import Alertfeed from './Alertfeed';
+import Message from './Message';
 import Kalmap from './Kalmap';
-import Write from './Write';
+import Account from './Account';
 
 import TabBar from '../Components/TabBar';
 
-
-export default class Home extends Component {
+export default class Main extends Component {
   render() {
-    const logout = () => Actions.pop();
-    const gotoProfile = () => Actions.profile();
     return (
-      <ScrollableTabView tabBarPosition='bottom' renderTabBar={() => <TabBar />}>
+      <ScrollableTabView tabBarPosition='top' renderTabBar={() => <TabBar />}>
         <Newsfeed tabLabel="ios-paper" />
-        <Profile tabLabel="ios-people" />
-        <Write tabLabel="ios-create" />
-        <Kalmap tabLabel="ios-pin" />
-        <Profile tabLabel="md-text" />
+        <Alertfeed tabLabel="ios-alert" />
+        <Message tabLabel="ios-chatboxes"/>
+        <Kalmap tabLabel="ios-people" />
+        <Account tabLabel="ios-list" />
       </ScrollableTabView>
     );
   }

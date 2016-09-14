@@ -16,8 +16,9 @@ import {Scene, Router, Actions} from 'react-native-router-flux';
 
 // Pages
 import Login from './src/Pages/Login';
-import Home from './src/Pages/Home';
-import Profile from './src/Pages/Profile';
+import Main from './src/Pages/Main';
+import Conversation from './src/Pages/Conversation';
+import Post from './src/Pages/Post';
 
 class Kalmamity extends Component {
 
@@ -54,8 +55,9 @@ class Kalmamity extends Component {
       <Router>
         <Scene key="root">
           <Scene onLoginSuccess={this.setLoggedIn} initial={!this.state.logged} hideNavBar={true} key="login" component={Login} title="Login"/>
-          <Scene onPop={this.exitApp} initial={this.state.logged} hideNavBar={true} key="home" component={Home} panHandlers={null} onBack={backPress}/>
-          <Scene hideNavBar={false} key="profile" component={Profile}/>
+          <Scene onPop={this.exitApp} initial={this.state.logged} hideNavBar={true} key="main" component={Main} panHandlers={null} onBack={backPress}/>
+          <Scene key="conversation" component={Conversation} title="conversation" />
+          <Scene key="post" component={Post} title="post" />
         </Scene>
       </Router>
     );

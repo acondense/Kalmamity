@@ -11,24 +11,16 @@ import {
   Text,
   View
 } from 'react-native';
-import {Scene, Router, Actions, ActionConst} from 'react-native-router-flux';
+import {Scene, Router, Actions} from 'react-native-router-flux';
 
 
-export default class Login extends Component {
+export default class Conversation extends Component {
   render() {
-    const goToPageTwo = () => {
-      // check credential here huh?
-      this.props.onLoggedInSuccess;
-      console.log("Logging in");
-      Actions.main({type: ActionConst.RESET});
-    }
-    console.log("return to log in");
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}  >
-          Login
+        <Text style={styles.welcome}>
+          Conversation
         </Text>
-        <Text onPress={goToPageTwo}>This is PageOne!</Text>
       </View>
     );
   }
