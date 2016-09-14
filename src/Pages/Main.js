@@ -24,7 +24,7 @@ export default class Main extends Component {
         <Newsfeed tabLabel="ios-paper" />
         <Alertfeed tabLabel="ios-alert" />
         <Message tabLabel="ios-chatboxes"/>
-        <Kalmap tabLabel="ios-people" />
+        <Kalmap tabLabel="ios-pin" />
         <Account tabLabel="ios-list" />
       </ScrollableTabView>
     );
