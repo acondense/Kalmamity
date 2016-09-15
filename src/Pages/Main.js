@@ -4,7 +4,8 @@ import {
   StyleSheet,
   Text,
   View,
-  BackAndroid
+  BackAndroid,
+  Animated
 } from 'react-native';
 import {Scene, Router, Actions, ActionConst} from 'react-native-router-flux';
 import ScrollableTabView from 'react-native-scrollable-tab-view';
@@ -18,13 +19,28 @@ import Account from './Account';
 import TabBar from '../Components/TabBar';
 
 export default class Main extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      isScrollDown: false,
+    }
+  }
+
+  toggleScroll(direction) {
+    console.log(direction);
+    if (direction === "up")
+      this.setState({isScrollDown: false,});
+    else
+      this.setState({isScrollDown: true});
+  }
+
   render() {
     return (
-      <ScrollableTabView tabBarPosition='top' renderTabBar={() => <TabBar />}>
+      <ScrollableTabView tabBarPosition='top' renderTabBar={() => <TabBar isScrollDown={this.state.isScrollDown} />}>
         <Newsfeed tabLabel="ios-paper" />
-        <Alertfeed tabLabel="ios-alert" />
+        <Alertfeed tabLabel="ios-alert" onScroll={this.toggleScroll.bind(this)}/>
         <Message tabLabel="ios-chatboxes"/>
-        <Kalmap tabLabel="ios-pin" />
         <Account tabLabel="ios-list" />
       </ScrollableTabView>
     );
