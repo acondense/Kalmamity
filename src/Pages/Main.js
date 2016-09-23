@@ -1,38 +1,47 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
   Text,
   View,
-  BackAndroid
+  BackAndroid,
+  Animated
 } from 'react-native';
 import {Scene, Router, Actions, ActionConst} from 'react-native-router-flux';
 import ScrollableTabView from 'react-native-scrollable-tab-view';
-import Profile from './Profile';
+
 import Newsfeed from './Newsfeed';
+import Alertfeed from './Alertfeed';
+import Message from './Message';
 import Kalmap from './Kalmap';
-import Write from './Write';
+import Account from './Account';
 
 import TabBar from '../Components/TabBar';
 
+export default class Main extends Component {
 
-export default class Home extends Component {
+  constructor() {
+    super();
+    this.state = {
+      isScrollDown: false,
+    }
+  }
+
+  toggleScroll(direction) {
+    console.log(direction);
+    if (direction === "up")
+      this.setState({isScrollDown: false,});
+    else
+      this.setState({isScrollDown: true});
+  }
+
   render() {
-    const logout = () => Actions.pop();
-    const gotoProfile = () => Actions.profile();
     return (
-      <ScrollableTabView tabBarPosition='bottom' renderTabBar={() => <TabBar />}>
+      <ScrollableTabView tabBarPosition='top' renderTabBar={() => <TabBar isScrollDown={this.state.isScrollDown} />}>
         <Newsfeed tabLabel="ios-paper" />
-        <Profile tabLabel="ios-people" />
-        <Write tabLabel="ios-create" />
-        <Kalmap tabLabel="ios-pin" />
-        <Profile tabLabel="md-text" />
+        <Alertfeed tabLabel="ios-alert" onScroll={this.toggleScroll.bind(this)}/>
+        <Message tabLabel="ios-chatboxes"/>
+        <Account tabLabel="ios-list" />
       </ScrollableTabView>
     );
   }

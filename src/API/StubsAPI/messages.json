@@ -1,0 +1,30 @@
+[
+  {
+    userId: 1,
+    username: "Red Periabras",
+    message: "Never gonna give you up",
+    date: "9-14-16",
+    time: "10:00 AM",
+  },
+  {
+    userId: 2,
+    username: "Jed Garcia",
+    message: "Never gonna let you down",
+    date: "9-14-16",
+    time: "10:00 AM",
+  },
+  {
+    userId: 3,
+    username: "Ariel Conde",
+    message: "Never gonna run around and hurt you",
+    date: "9-14-16",
+    time: "10:00 AM",
+  },
+  {
+    userId: 4,
+    username: "Ariel Conde",
+    message: "Never gonna run around and hurt you",
+    date: "9-14-16",
+    time: "10:00 AM",
+  },
+]

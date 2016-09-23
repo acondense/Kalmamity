@@ -10,24 +10,11 @@ import {
 } from 'react-native';
 import {Scene, Router, Actions} from 'react-native-router-flux';
 
-import NewsfeedItem from '../Components/NewsfeedItem';
-
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import 'firebase/database';
-
-// Initialize Firebase
-const firebaseConfig = {
-  apiKey: "AIzaSyBUJRtPEn6hN4E0q-TAGfy8l-111TlsGtw",
-  authDomain: "kalmamity-2223f.firebaseapp.com",
-  databaseURL: "https://kalmamity-2223f.firebaseio.com",
-  storageBucket: "kalmamity-2223f.appspot.com",
-};
-// const firebaseApp = firebase.initializeApp(firebaseConfig);
+import MessageItem from './MessageItem';
 
 var width = Dimensions.get('window').width;
 
-export default class NewsfeedAround extends Component {
+export default class RefreshableNewsfeed extends Component {
   constructor(props) {
     super(props);
     var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
@@ -55,12 +42,23 @@ export default class NewsfeedAround extends Component {
       });
   }
 
+  toggleMessage() {
+    console.log("called from refreshable messsages");
+    this.props.toggleMessage();
+  }
+
+  renderRow(rowData) {
+    return (
+      <MessageItem style={{flex: 1}} message={rowData} key={rowData.userId} />
+    )
+  }
+
   render() {
     return (
       <ListView
         style={styles.container}
-        dataSource={this.props.feed}
-        renderRow={(rowData) => <NewsfeedItem style={{flex: 1}} news={rowData} key={rowData.id} />}
+        dataSource={this.props.messages}
+        renderRow={this.renderRow.bind(this)}
         refreshControl={
           <RefreshControl
             refreshing={this.state.refreshing}

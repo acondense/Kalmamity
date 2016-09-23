@@ -1,5 +1,14 @@
 [
   {
+    "userId": 1,
+    "id": 1,
+    "username": "Ariel Conde",
+    "date": "9/13/2016",
+    "location": "Manila, PH",
+    "body": "This data is from alert",
+    "likes": 2,
+  },
+  {
     "userId": 2,
     "id": 2,
     "username": "Jed Garcia",

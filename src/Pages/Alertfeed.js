@@ -13,21 +13,23 @@ import ScrollableTabView from 'react-native-scrollable-tab-view';
 import ActionButton from 'react-native-action-button';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-import RefreshableNewsfeed from '../Components/RefreshableNewsfeed';
+import RefreshableAlertfeed from '../Components/RefreshableAlertfeed';
 
-import posts from '../API/StubsAPI/posts.json';
+import alerts from '../API/StubsAPI/alerts.json';
 
-export default class Newsfeed extends Component {
+export default class Alertfeed extends Component {
 
   constructor() {
     super();
     this.state = {
       isFollowingActive: true,
       isAroundActive: false,
+      feedFollowing: {title: "HEY FEED"},
+      feedAround: {title: "HEY AROUND"}
     }
   }
 
-  _getAroundFeed() {
+  _getFeeds() {
     // fetch('../API/StubsAPI/posts.json')
     //   .then((response) => response.json())
     //   .then((responseJson) => {
@@ -46,21 +48,20 @@ export default class Newsfeed extends Component {
     // });
     var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
     this.setState({
-      feedAround: posts,
-      dsAround: ds.cloneWithRows(posts),
-      dsFollowing: ds.cloneWithRows(posts),
+      dsAround: ds.cloneWithRows(alerts),
+      dsFollowing: ds.cloneWithRows(alerts),
     });
   }
 
   componentWillMount() {
-    this._getAroundFeed();
+    this._getFeeds();
   }
 
   renderFeed() {
     if (this.state.isFollowingActive) {
       if (this.state.dsFollowing) {
         return (
-          <RefreshableNewsfeed feed={this.state.dsFollowing} styles={styles.list} />
+          <RefreshableAlertfeed feed={this.state.dsFollowing} styles={styles.list} onScroll={this.props.onScroll.bind(this)} />
         );
       } else {
         return <Text>Loading Following</Text>
@@ -68,7 +69,7 @@ export default class Newsfeed extends Component {
     } else {
       if (this.state.dsAround) {
         return (
-          <RefreshableNewsfeed feed={this.state.dsAround} style={styles.list} />
+          <RefreshableAlertfeed feed={this.state.dsAround} style={styles.list} onScroll={this.props.onScroll.bind(this)} />
         );
       } else {
         return <Text>Loading Around</Text>
@@ -102,7 +103,7 @@ export default class Newsfeed extends Component {
             <Text  style={this.state.isFollowingActive? styles.tabTextActive : styles.tabText}>FOLLOWING</Text>
           </TouchableOpacity>
           <TouchableOpacity style={this.state.isAroundActive ? styles.tabAroundActive : styles.tabAround} onPress={this.showAround.bind(this)}>
-            <Text style={this.state.isAroundActive? styles.tabTextActive : styles.tabText}>NEARBY</Text>
+            <Text style={this.state.isAroundActive? styles.tabTextActive : styles.tabText}>AROUND</Text>
           </TouchableOpacity>
         </View>
         {this.renderFeed()}

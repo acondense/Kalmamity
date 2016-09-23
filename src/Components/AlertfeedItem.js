@@ -11,17 +11,17 @@ import {Scene, Router, Actions} from 'react-native-router-flux';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 
-export default class NewsfeedItem extends Component {
+export default class AlertfeedItem extends Component {
 
-  togglePost(news) {
-    Actions.post({
-      news: news
+  toggleAlert(alert) {
+    Actions.alert({
+      alert: alert
     });
   }
 
   render() {
     return (
-      <TouchableOpacity style={styles.container} onPress={() => this.togglePost(this.props.news)}>
+      <TouchableOpacity style={styles.container} onPress={() => this.toggleAlert(this.props.alert)}>
         <View>
         <View style={styles.userinfo}>
           <Image
@@ -30,19 +30,19 @@ export default class NewsfeedItem extends Component {
           />
           <View style={styles.namelocation}>
             <Text style={styles.username}>
-              {this.props.news.username}
+              {this.props.alert.username}
             </Text>
             <Text style={styles.location}>
-              {this.props.news.location}
+              {this.props.alert.location}
             </Text>
           </View>
         </View>
         <Text style={styles.text}>
-          {this.props.news.body}
+          {this.props.alert.body}
         </Text>
         <View style={styles.actions}>
           <Icon style={styles.action} name="md-heart-outline" size={25} />
-          <Text style={styles.likesCount}>{this.props.news.likes}</Text>
+          <Text style={styles.likesCount}>{this.props.alert.likes}</Text>
           <Icon style={styles.action} name="ios-share-alt" size={25} />
         </View>
         <Text style={styles.text}>
