@@ -15,6 +15,7 @@ import Alertfeed from './Alertfeed';
 import Message from './Message';
 import Kalmap from './Kalmap';
 import Account from './Account';
+import Write from './Write';
 
 import TabBar from '../Components/TabBar';
 
@@ -37,9 +38,9 @@ export default class Main extends Component {
 
   render() {
     return (
-      <ScrollableTabView tabBarPosition='top' renderTabBar={() => <TabBar isScrollDown={this.state.isScrollDown} />}>
+      <ScrollableTabView locked={true} tabBarPosition='bottom' renderTabBar={() => <TabBar isScrollDown={this.state.isScrollDown} />}>
         <Newsfeed tabLabel="ios-paper" />
-        <Alertfeed tabLabel="ios-alert" onScroll={this.toggleScroll.bind(this)}/>
+        <Alertfeed tabLabel="md-warning" />
         <Message tabLabel="ios-chatboxes"/>
         <Account tabLabel="ios-list" />
       </ScrollableTabView>

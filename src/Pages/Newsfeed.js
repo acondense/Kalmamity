@@ -106,14 +106,6 @@ export default class Newsfeed extends Component {
           </TouchableOpacity>
         </View>
         {this.renderFeed()}
-        <ActionButton buttonColor="black" bgColor="rgba(67, 255, 212, 0.5)">
-          <ActionButton.Item buttonColor='#ff4369' title="Help request" onPress={() => console.log("Help request")}>
-            <Icon name="ios-help-buoy" style={styles.actionButtonIcon} />
-          </ActionButton.Item>
-          <ActionButton.Item buttonColor='#1abc9c' title="Update" onPress={() => {}}>
-            <Icon name="ios-create" style={styles.actionButtonIcon} />
-          </ActionButton.Item>
-        </ActionButton>
       </View>
     );
   }

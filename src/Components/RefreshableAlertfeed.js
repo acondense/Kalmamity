@@ -51,24 +51,24 @@ export default class RefreshableAlertfeed extends Component {
   }
 
   onScroll(event) {
-    var currentOffset = event.nativeEvent.contentOffset.y;
-    // var direction = (currentOffset - 20) > this.state.offset  && this.state.direction == 'down' ? 'down' : 'up';
-    // 
-    if (currentOffset - 20 >= this.state.offset) {
-      this.setState({
-        offset: currentOffset,
-        direction: 'down',
-      });
-    } else if (currentOffset <= this.state.offset - 20) {
-      this.setState({
-        offset: currentOffset,
-        direction: 'up',
-      })
-    }
+    // var currentOffset = event.nativeEvent.contentOffset.y;
+    // // var direction = (currentOffset - 20) > this.state.offset  && this.state.direction == 'down' ? 'down' : 'up';
+    // // 
+    // if (currentOffset - 20 >= this.state.offset) {
+    //   this.setState({
+    //     offset: currentOffset,
+    //     direction: 'down',
+    //   });
+    // } else if (currentOffset <= this.state.offset - 20) {
+    //   this.setState({
+    //     offset: currentOffset,
+    //     direction: 'up',
+    //   })
+    // }
     
-    console.log(currentOffset + " : " + this.state.offset + " : " + this.state.direction);
+    // console.log(currentOffset + " : " + this.state.offset + " : " + this.state.direction);
 
-    this.props.onScroll(this.state.direction);
+    // this.props.onScroll(this.state.direction);
   }
 
   render() {

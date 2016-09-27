@@ -46,14 +46,14 @@ export default class Profile extends Component {
 
   // neeed to toggle animation
   componentDidMount() {
-    this.state.bounceValue.setValue(1.5);     // Start large
-    Animated.spring(                          // Base: spring, decay, timing
-      this.state.bounceValue,                 // Animate `bounceValue`
-      {
-        toValue: 0.8,                         // Animate to smaller size
-        friction: 1,                          // Bouncier spring
-      }
-    ).start();                                // Start the animation
+    // this.state.bounceValue.setValue(1.5);     // Start large
+    // Animated.spring(                          // Base: spring, decay, timing
+    //   this.state.bounceValue,                 // Animate `bounceValue`
+    //   {
+    //     toValue: 0.8,                         // Animate to smaller size
+    //     friction: 1,                          // Bouncier spring
+    //   }
+    // ).start();                                // Start the animation
   }
 
   getTabTitle() {
@@ -80,8 +80,14 @@ export default class Profile extends Component {
       )
     } else {
       return (
-        <Animatable.View duration={300} animation="slideInDown">
-        <View style={this.props.isScrollDown ? styles.container : styles.containerOpen}>
+        <View style={styles.containerOpen}>
+          <TouchableOpacity style={styles.tab} onPress={() => Actions.write()}>
+              <Icon
+                name="md-create"
+                size={25}
+              />
+              {/*<Text>{this.getTabTitle(tab)}</Text>*/}
+          </TouchableOpacity>
           {this.props.tabs.map((tab, i) => {
             return <TouchableOpacity key={tab} onPress={() => this.props.goToPage(i)} style={styles.tab}>
               <Icon
@@ -93,7 +99,6 @@ export default class Profile extends Component {
             </TouchableOpacity>;
           })}
         </View>
-        </Animatable.View>
       );
     }
   }

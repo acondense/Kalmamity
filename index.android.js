@@ -24,6 +24,7 @@ import Profile from './src/Pages/Profile';
 import SafetyCheck from './src/Pages/SafetyCheck';
 import Kalmap from './src/Pages/Kalmap';
 import Evacuation from './src/Pages/Evacuation';
+import Write from './src/Pages/Write';
 
 class Kalmamity extends Component {
 
@@ -67,6 +68,7 @@ class Kalmamity extends Component {
           <Scene key="kalmap" component={Kalmap} title="Kalmap" />
           <Scene key="evacuation" component={Evacuation} title="Evacuation" />
           <Scene key="safetyCheck" component={SafetyCheck} title="Safety Check" />
+          <Scene key="write" component={Write} title="Write" />
         </Scene>
       </Router>
     );

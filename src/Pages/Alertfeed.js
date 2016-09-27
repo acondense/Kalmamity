@@ -61,7 +61,7 @@ export default class Alertfeed extends Component {
     if (this.state.isFollowingActive) {
       if (this.state.dsFollowing) {
         return (
-          <RefreshableAlertfeed feed={this.state.dsFollowing} styles={styles.list} onScroll={this.props.onScroll.bind(this)} />
+          <RefreshableAlertfeed feed={this.state.dsFollowing} styles={styles.list} />
         );
       } else {
         return <Text>Loading Following</Text>
@@ -69,7 +69,7 @@ export default class Alertfeed extends Component {
     } else {
       if (this.state.dsAround) {
         return (
-          <RefreshableAlertfeed feed={this.state.dsAround} style={styles.list} onScroll={this.props.onScroll.bind(this)} />
+          <RefreshableAlertfeed feed={this.state.dsAround} style={styles.list} />
         );
       } else {
         return <Text>Loading Around</Text>
@@ -107,14 +107,6 @@ export default class Alertfeed extends Component {
           </TouchableOpacity>
         </View>
         {this.renderFeed()}
-        <ActionButton buttonColor="black" bgColor="rgba(67, 255, 212, 0.5)">
-          <ActionButton.Item buttonColor='#ff4369' title="Help request" onPress={() => console.log("Help request")}>
-            <Icon name="ios-help-buoy" style={styles.actionButtonIcon} />
-          </ActionButton.Item>
-          <ActionButton.Item buttonColor='#1abc9c' title="Update" onPress={() => {}}>
-            <Icon name="ios-create" style={styles.actionButtonIcon} />
-          </ActionButton.Item>
-        </ActionButton>
       </View>
     );
   }
