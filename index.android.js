@@ -25,6 +25,8 @@ import SafetyCheck from './src/Pages/SafetyCheck';
 import Kalmap from './src/Pages/Kalmap';
 import Evacuation from './src/Pages/Evacuation';
 import Write from './src/Pages/Write';
+import Register from './src/Pages/Register';
+import WhatIsARescuer from './src/Pages/WhatIsARescuer';
 
 class Kalmamity extends Component {
 
@@ -68,7 +70,9 @@ class Kalmamity extends Component {
           <Scene key="kalmap" component={Kalmap} title="Kalmap" />
           <Scene key="evacuation" component={Evacuation} title="Evacuation" />
           <Scene key="safetyCheck" component={SafetyCheck} title="Safety Check" />
-          <Scene key="write" component={Write} title="Write" />
+          <Scene key="write" component={Write} title="Write"/>
+          <Scene key="register" component={Register} title="Register"/>
+          <Scene key="whatIsARescuer" component={WhatIsARescuer} title="What Is A Rescuer"/>
         </Scene>
       </Router>
     );

@@ -29,6 +29,11 @@ export default class Login extends Component {
       console.log("Logging in");
       Actions.main({type: ActionConst.RESET});
     }
+
+    const gotoRegister = () => {
+      Actions.register();
+    }
+
     console.log("return to log in");
     return (
       <KeyboardAwareScrollView>
@@ -73,7 +78,7 @@ export default class Login extends Component {
           <Text style={styles.btnTxt}>LOGIN</Text>
         </TouchableOpacity>
         <Text style={styles.or}>---------- OR -----------</Text>
-        <TouchableOpacity style={styles.loginBtn}>
+        <TouchableOpacity style={styles.loginBtn} onPress={gotoRegister}>
           <Text style={styles.btnTxt}>Register</Text>
         </TouchableOpacity>
       </View>
@@ -88,7 +93,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
     height: height,
     marginBottom: 50,
     paddingTop: 50,

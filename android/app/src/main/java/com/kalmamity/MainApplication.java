@@ -11,6 +11,7 @@ import com.facebook.react.shell.MainReactPackage;
 import com.airbnb.android.react.maps.MapsPackage;
 import com.burlap.filetransfer.FileTransferPackage;
 import com.lwansbrough.RCTCamera.RCTCameraPackage;
+import com.mikemonteith.reactnativeandroidcheckbox.CheckboxPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -29,7 +30,8 @@ public class MainApplication extends Application implements ReactApplication {
           new MainReactPackage(),
           new MapsPackage(),
           new FileTransferPackage(),
-          new RCTCameraPackage()
+          new RCTCameraPackage(),
+          new CheckboxPackage()
         );
     }
   };
