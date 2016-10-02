@@ -27,6 +27,7 @@ import Evacuation from './src/Pages/Evacuation';
 import Write from './src/Pages/Write';
 import Register from './src/Pages/Register';
 import WhatIsARescuer from './src/Pages/WhatIsARescuer';
+import Capture from './src/Pages/Capture';
 
 class Kalmamity extends Component {
 
@@ -73,6 +74,7 @@ class Kalmamity extends Component {
           <Scene key="write" component={Write} title="Write"/>
           <Scene key="register" component={Register} title="Register"/>
           <Scene key="whatIsARescuer" component={WhatIsARescuer} title="What Is A Rescuer"/>
+          <Scene key="capture" component={Capture} title="Capture" />
         </Scene>
       </Router>
     );

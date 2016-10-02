@@ -57,11 +57,7 @@ export default class Message extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>{this.state.hasOpenConversation}</Text>
-        <Text>{this.state.hasOpenConversation}</Text>
-        <Text>{this.state.hasOpenConversation}</Text>
         <RefreshableMessages messages={this.state.dsMessages} toggleMessage={this._toggleOpenConversation}/>
-        <Text>{this.state.hasOpenConversation}</Text>
         {this.state.hasOpenConversation ? <Text>A convo</Text> : <Text> Not a convo </Text>}
       </View>
     );

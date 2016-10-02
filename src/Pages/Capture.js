@@ -16,12 +16,28 @@ import {Scene, Router, Actions} from 'react-native-router-flux';
 import Camera from 'react-native-camera';
 
 
-export default class Conversation extends Component {
+export default class Capture extends Component {
+
+  takePicture() {
+    this.camera.capture()
+      .then((data) => console.log(data))
+      .catch(err => console.error(err));
+  }
 
   render() {
     return (
       <View style={styles.container}>
-        <Text>Conversation</Text>
+        <Text>
+          Camera
+        </Text>
+        <Camera
+          ref={(cam) => {
+            this.camera = cam;
+          }}
+          style={styles.preview}
+          aspect={Camera.constants.Aspect.fill}>
+          <Text style={styles.capture} onPress={this.takePicture.bind(this)}>[CAPTURE]</Text>
+        </Camera>
       </View>
     );
   }

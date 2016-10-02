@@ -99,9 +99,11 @@ export default class Alertfeed extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.tabs}>
+          {/*
           <TouchableOpacity style={this.state.isFollowingActive ? styles.tabFollowingActive: styles.tabFollowing} onPress={this.showFollowing.bind(this)}>
             <Text  style={this.state.isFollowingActive? styles.tabTextActive : styles.tabText}>FOLLOWING</Text>
           </TouchableOpacity>
+          */}
           <TouchableOpacity style={this.state.isAroundActive ? styles.tabAroundActive : styles.tabAround} onPress={this.showAround.bind(this)}>
             <Text style={this.state.isAroundActive? styles.tabTextActive : styles.tabText}>AROUND</Text>
           </TouchableOpacity>

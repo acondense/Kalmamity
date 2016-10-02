@@ -60,17 +60,25 @@ class PostAsUpdate extends Component {
 
         <View style={{flexDirection: "row", marginTop: 30, justifyContent: "space-between", borderBottomWidth: 1, borderColor: "black"}}>
           <Text style={{fontSize: 18, fontWeight: "500", color: "black"}}>IMAGES</Text>
+          
           <View style={{flexDirection: "row"}}>
             <TouchableOpacity style={styles.imageInput}>
               <Icon name="ios-image-outline" size={36} />
             </TouchableOpacity>
-            <TouchableOpacity style={[{paddingTop: 3}, styles.imageInput]}>
+            <TouchableOpacity style={[{paddingTop: 3}, styles.imageInput]} onPress={() => Actions.capture()}>
               <Icon name="ios-camera-outline" size={36} />
             </TouchableOpacity>
           </View>
         </View>
 
-        <View style={{alignItems: "center"}}>
+        <View style={{flexDirection: "row", height: 80, padding: 10, alignItems: "center", borderBottomWidth: 1, borderColor: "black"}}>
+          <Image
+            source={require('../assets/user.jpg')}
+            style={styles.postImage}
+          />
+        </View>
+
+        <View style={{alignItems: "center", marginTop: 30}}>
           <TouchableOpacity style={styles.postBtn}>
             <Text style={styles.btnTxt}>
               Post
@@ -180,5 +188,9 @@ const styles = StyleSheet.create({
   imageInput: {
     marginLeft: 20,
     padding: 0,
+  },
+  postImage: {
+    height: 60,
+    width: 60,
   }
 });
