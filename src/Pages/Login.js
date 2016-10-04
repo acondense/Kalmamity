@@ -46,7 +46,7 @@ export default class Login extends Component {
         <Text style={styles.title}  >
           Kalmamity
         </Text>
-        <Text style={{color: "#1abc9c", marginBottom: 10}}>Stay calm during calamaties</Text>
+        <Text style={{color: "#1abc9c", marginBottom: 10}}>Stay calm during calamaties.</Text>
         <View style={styles.inputFields}>
         <Sae
           label={'Email Address'}

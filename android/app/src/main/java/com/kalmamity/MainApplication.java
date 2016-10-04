@@ -12,6 +12,8 @@ import com.airbnb.android.react.maps.MapsPackage;
 import com.burlap.filetransfer.FileTransferPackage;
 import com.lwansbrough.RCTCamera.RCTCameraPackage;
 import com.mikemonteith.reactnativeandroidcheckbox.CheckboxPackage;
+import com.centaurwarchief.smslistener.SmsListenerPackage;
+import com.rhaker.reactnativesmsandroid.RNSmsAndroidPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -31,7 +33,9 @@ public class MainApplication extends Application implements ReactApplication {
           new MapsPackage(),
           new FileTransferPackage(),
           new RCTCameraPackage(),
-          new CheckboxPackage()
+          new CheckboxPackage(),
+          new SmsListenerPackage(),
+          new RNSmsAndroidPackage()
         );
     }
   };

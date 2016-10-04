@@ -21,24 +21,48 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { Hoshi } from 'react-native-textinput-effects';
 import ScrollableTabView from 'react-native-scrollable-tab-view';
+import ModalPicker from 'react-native-modal-picker';
+import Checkbox from 'react-native-android-checkbox';
 
-
-class PostAsUpdate extends Component {
+class PostAs extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {text: '', height: 0};
+    this.state = {text: '', height: 0, textInputValue: ''};
+  }
+
+  _onValueChange(value) {
+    this.setState({
+      checkBoxValue: value
+    });
   }
 
   render() {
+
+    let index = 0;
+    const data = [
+      { key: index++, section: true, label: 'Select Location' },
+      { key: index++, label: 'PUP Sta. Mesa' },
+      { key: index++, label: 'Home' },
+      { key: index++, label: 'Dorm' },
+    ];
+
     return (
       <KeyboardAwareScrollView>
-      <View style={styles.writeContainer}>
+      <View style={[styles.writeContainer]}>
+
+        <Text style={{color: "black", fontWeight: "500"}}>Location: </Text>
+        <ModalPicker
+          data={data}
+          initValue="Select Location"
+          style={{marginTop: 10, marginBottom: 30,}}
+          overlayStyle={{backgroundColor: "#1abc9c"}}
+          sectionTextStyle={{color: "black", fontSize: 20, fontWeight: "500", fontFamily: "Montserrat-Regular"}}
+          optionTextStyle={{color: "black"}}
+          // onChange={(option)=>{ alert(`${option.label} (${option.key}) nom nom nom`) }}
+        />
+
         <View style={{flexDirection: "row"}}>
-          <Image
-            source={require('../assets/user.jpg')}
-            style={styles.userimage}
-          />
           <View style={{borderColor: "black", borderBottomWidth: 1, flex: 0.7}}>
           <TextInput
             // onChangeText={(text) => this.setState({text})}
@@ -59,7 +83,7 @@ class PostAsUpdate extends Component {
         </View>
 
         <View style={{flexDirection: "row", marginTop: 30, justifyContent: "space-between", borderBottomWidth: 1, borderColor: "black"}}>
-          <Text style={{fontSize: 18, fontWeight: "500", color: "black"}}>IMAGES</Text>
+          <Text style={{fontSize: 18, fontWeight: "500", color: "black"}}>IMAGE</Text>
           
           <View style={{flexDirection: "row"}}>
             <TouchableOpacity style={styles.imageInput}>
@@ -71,11 +95,33 @@ class PostAsUpdate extends Component {
           </View>
         </View>
 
+        {/*}
         <View style={{flexDirection: "row", height: 80, padding: 10, alignItems: "center", borderBottomWidth: 1, borderColor: "black"}}>
           <Image
             source={require('../assets/user.jpg')}
             style={styles.postImage}
           />
+        </View>
+        */}
+
+        <View style={{flexDirection: "row", justifyContent: "center", marginTop: 20, marginLeft: 10}}>
+          <View style={{alignItems: "center"}}>
+            <Checkbox
+              value={this.state.checkBoxValue}
+              disabled={false}
+              onValueChange={this._onValueChange.bind(this)}
+            />
+          </View>
+          <Text style={{color: "black", fontSize: 18, marginLeft: 10}}>Send via SMS</Text>
+          {/*
+          <TouchableOpacity onPress={() => Actions.whatIsARescuer()}>
+            <FontAwesomeIcon
+              name="question-circle-o"
+              size={20}
+              style={{color: "#1abc9c", marginLeft: 10}}
+            />
+          </TouchableOpacity>
+          */}
         </View>
 
         <View style={{alignItems: "center", marginTop: 30}}>
@@ -92,28 +138,23 @@ class PostAsUpdate extends Component {
   }
 }
 
-class PostAsHelp extends Component {
-  render() {
-    return <Text>This is an help</Text>
-  }
-}
-
 export default class Write extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={{flexDirection: "row", padding: 15}}>
-          <TouchableOpacity onPress={() => Actions.pop()} style={styles.closeBtn}>
+        <View style={{flexDirection: "row", padding: 15, alignItems: "flex-end"}}>
+          <TouchableOpacity onPress={() => Actions.pop()} style={{flex: 0.1}}>
             <Icon
               name="md-close"
               size={25}
             />
           </TouchableOpacity>
-          <Text style={styles.shareAs}>Share as</Text>
+          <Text style={{flex: 0.6, textAlign: "center", color: "black", fontSize: 20, fontFamily: "Montserrat-Regular"}}>Post</Text>
+          <View style={{flex: 0.1}}></View>{/*Just to align things*/}
         </View>
-        <ScrollableTabView tabBarPosition='top'>
-          <PostAsUpdate tabLabel="UPDATE" />
-          <PostAsHelp tabLabel="HELP" />
+        <ScrollableTabView tabBarPosition='top' style={{flex: 1}} scrollWithoutAnimation={true} locked={true}>
+          <PostAs tabLabel="UPDATE" />
+          <PostAs tabLabel="HELP" />
         </ScrollableTabView>
       </View>
     );
@@ -130,6 +171,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
   },
   closeBtn: {
+    flex: 0.2,
+    backgroundColor: "red"
   },
   writeContainer: {
     flex: 1,
@@ -163,7 +206,10 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "500",
     marginLeft: 20,
-    color: "#1abc9c"
+    color: "#1abc9c",
+    flex: 0.6,
+    backgroundColor: "blue",
+    textAlign: "center",
   },
   userimage: {
     width: 50,

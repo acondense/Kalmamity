@@ -10,12 +10,12 @@ import {
 import {Scene, Router, Actions, ActionConst} from 'react-native-router-flux';
 import ScrollableTabView from 'react-native-scrollable-tab-view';
 
-import Newsfeed from './Newsfeed';
-import Alertfeed from './Alertfeed';
+import Updatefeed from './Updatefeed';
+import Helpfeed from './Helpfeed';
 import Message from './Message';
 import Kalmap from './Kalmap';
-import Account from './Account';
-import Write from './Write';
+// import Account from './Account';
+import Profile from './Profile';
 
 import TabBar from '../Components/TabBar';
 
@@ -24,25 +24,17 @@ export default class Main extends Component {
   constructor() {
     super();
     this.state = {
-      isScrollDown: false,
+      // isScrollDown: false,
     }
-  }
-
-  toggleScroll(direction) {
-    console.log(direction);
-    if (direction === "up")
-      this.setState({isScrollDown: false,});
-    else
-      this.setState({isScrollDown: true});
   }
 
   render() {
     return (
-      <ScrollableTabView locked={true} tabBarPosition='bottom' renderTabBar={() => <TabBar isScrollDown={this.state.isScrollDown} />}>
-        <Newsfeed tabLabel="ios-paper" />
-        <Alertfeed tabLabel="md-warning" />
-        <Message tabLabel="ios-chatboxes"/>
-        <Account tabLabel="ios-list" />
+      <ScrollableTabView scrollWithoutAnimation={true} locked={true} tabBarPosition='bottom' renderTabBar={() => <TabBar isScrollDown={this.state.isScrollDown} />}>
+        <Updatefeed tabLabel="ios-paper" />
+        <Helpfeed tabLabel="ios-warning" />
+        <Kalmap tabLabel="ios-map"/>
+        <Profile tabLabel="ios-person" />
       </ScrollableTabView>
     );
   }

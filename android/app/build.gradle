@@ -143,6 +143,8 @@ dependencies {
     compile project(':RNFileTransfer')
     compile project(':react-native-camera')
     compile project(':react-native-android-checkbox')
+    compile project(':react-native-android-sms-listener')
+    compile project(':react-native-sms-android')
 }
 
 // Run this once to be able to run the application with BUCK

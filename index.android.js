@@ -64,14 +64,14 @@ class Kalmamity extends Component {
       <Router>
         <Scene key="root">
           <Scene onLoginSuccess={this.setLoggedIn} initial={!this.state.logged} hideNavBar={true} key="login" component={Login} title="Login"/>
-          <Scene onPop={this.exitApp} initial={this.state.logged} hideNavBar={true} key="main" component={Main} panHandlers={null} onBack={backPress}/>
+          <Scene onPop={this.exitApp} initial={this.state.logged} hideNavBar={true} key="main" component={Main} panHandlers={null} onBack={backPress} direction="vertical" />
           <Scene key="conversation" component={Conversation} title="conversation" />
           <Scene key="post" component={Post} title="post" />
           <Scene key="profile" component={Profile} title="profile" />
           <Scene key="kalmap" component={Kalmap} title="Kalmap" />
           <Scene key="evacuation" component={Evacuation} title="Evacuation" />
           <Scene key="safetyCheck" component={SafetyCheck} title="Safety Check" />
-          <Scene key="write" component={Write} title="Write"/>
+          <Scene key="write" component={Write} title="Write" direction="vertical" />
           <Scene key="register" component={Register} title="Register"/>
           <Scene key="whatIsARescuer" component={WhatIsARescuer} title="What Is A Rescuer"/>
           <Scene key="capture" component={Capture} title="Capture" />

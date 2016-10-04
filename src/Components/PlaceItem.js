@@ -11,45 +11,19 @@ import {Scene, Router, Actions} from 'react-native-router-flux';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 
-export default class AlertfeedItem extends Component {
+export default class PlaceItem extends Component {
 
   toggleAlert(alert) {
-    Actions.alert({
+    Actions.kalmap({
       alert: alert
     });
   }
 
   render() {
     return (
-      <TouchableOpacity style={styles.container}
-        // onPress={() => this.toggleAlert(this.props.alert)}
-      >
+      <TouchableOpacity style={styles.container} onPress={() => this.toggleAlert(this.props.alert)}>
         <View>
-        <View style={styles.userinfo}>
-          <Image
-            source={require('../assets/user.jpg')}
-            style={styles.userimage}
-          />
-          <View style={styles.namelocation}>
-            <Text style={styles.username}>
-              {this.props.alert.username}
-            </Text>
-            <Text style={styles.location}>
-              {this.props.alert.location}
-            </Text>
-          </View>
-        </View>
-        <Text style={styles.text}>
-          {this.props.alert.body}
-        </Text>
-        <View style={styles.actions}>
-          <Icon style={styles.action} name="md-heart-outline" size={25} />
-          <Text style={styles.likesCount}>{this.props.alert.likes}</Text>
-          <Icon style={styles.action} name="ios-share-alt" size={25} />
-        </View>
-        <Text style={styles.text}>
-          {this.props.comment}
-        </Text>
+          <Text style={{color: "black", fontSize: 14, fontFamily: "Montserrat-Regular"}}>PUP Sta. Mesa, Manila</Text>
         </View>
       </TouchableOpacity>
     );
@@ -59,8 +33,7 @@ export default class AlertfeedItem extends Component {
 const styles = StyleSheet.create({
   container: {
     marginBottom: 0,
-    padding: 20,
-    paddingBottom: 0,
+    padding: 15,
     alignItems: 'stretch',
     elevation: 1,
     backgroundColor: "white",

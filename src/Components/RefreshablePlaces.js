@@ -10,11 +10,11 @@ import {
 } from 'react-native';
 import {Scene, Router, Actions} from 'react-native-router-flux';
 
-import AlertfeedItem from './AlertfeedItem';
+import PlaceItem from './PlaceItem';
 
 var width = Dimensions.get('window').width;
 
-export default class RefreshableAlertfeed extends Component {
+export default class RefreshablePlaces extends Component {
   constructor(props) {
     super(props);
     var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
@@ -46,7 +46,7 @@ export default class RefreshableAlertfeed extends Component {
 
   renderRow(rowData) {
     return (
-      <AlertfeedItem style={{flex: 1}} alert={rowData} key={rowData.id} />
+      <PlaceItem style={{flex: 1}} alert={rowData} key={rowData.id} />
     )
   }
 

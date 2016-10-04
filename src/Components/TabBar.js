@@ -85,6 +85,7 @@ export default class Profile extends Component {
               <Icon
                 name="md-create"
                 size={25}
+                color="gray"
               />
               {/*<Text>{this.getTabTitle(tab)}</Text>*/}
           </TouchableOpacity>
@@ -130,13 +131,10 @@ const styles = StyleSheet.create({
     borderTopColor: "#1abc9c",
     height: 45,
     flexDirection: 'row',
-    paddingTop: 5,
-    borderWidth: 1,
-    borderTopWidth: 0,
-    borderLeftWidth: 0,
-    borderRightWidth: 0,
-    borderBottomColor: 'rgba(0,0,0,0.0)',
-    borderTopColor: 'rgba(255,0,0,0.05)',
+    paddingTop: 10,
+    borderTopWidth: 1,
+    borderTopColor: 'gray',
+    backgroundColor: "black",
   },
   activeTab: {
     color: "#1abc9c",
