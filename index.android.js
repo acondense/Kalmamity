@@ -15,24 +15,38 @@ import {
 import {Scene, Router, Actions} from 'react-native-router-flux';
 
 // Pages
-import Login from './src/Pages/Login';
-import Main from './src/Pages/Main';
-import Conversation from './src/Pages/Conversation';
-import Post from './src/Pages/Post';
+import Login from './src/Pages/Default/Login';
+import Main from './src/Pages/Default/Main';
+import Conversation from './src/Pages/Default/Conversation';
+import WriteComment from './src/Pages/Default/WriteComment';
+import Post from './src/Pages/Default/Post';
+import Register from './src/Pages/Default/Register';
+import Capture from './src/Pages/Default/Capture';
+import EditInfo from './src/Pages/Default/EditInfo';
+import ViewInMap from './src/Pages/Default/ViewInMap';
 
-import Profile from './src/Pages/Profile';
-import SafetyCheck from './src/Pages/SafetyCheck';
-import Kalmap from './src/Pages/Kalmap';
-import Evacuation from './src/Pages/Evacuation';
-import Write from './src/Pages/Write';
-import Register from './src/Pages/Register';
-import WhatIsARescuer from './src/Pages/WhatIsARescuer';
-import Capture from './src/Pages/Capture';
+import Register2 from './src/Pages/Default/Register2';
+
+import Write from './src/Pages/MainPages/Write';
+
+import WhatIsARescuer from './src/Pages/Presentations/WhatIsARescuer';
+import InitialPage from './src/Pages/Presentations/InitialPage';
+import Tutorial from './src/Pages/Presentations/Tutorial';
+import TermsAndConditions from './src/Pages/Presentations/TermsAndConditions';
+
+      // {
+      // <View>
+      //   <Text style={{fontSize: 30}}>Run please!</Text>
+      // </View>
+      // }
+      // 
+      // 
+          
 
 class Kalmamity extends Component {
 
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       logged: false,
       loading: true,
@@ -63,18 +77,21 @@ class Kalmamity extends Component {
     return (
       <Router>
         <Scene key="root">
-          <Scene onLoginSuccess={this.setLoggedIn} initial={!this.state.logged} hideNavBar={true} key="login" component={Login} title="Login"/>
+          <Scene initial={true} hideNavBar={true} key="initial" component={InitialPage} title="Initial Page" />
+          <Scene hideNavBar={true} key="login" component={Login} title="Login"/>
           <Scene onPop={this.exitApp} initial={this.state.logged} hideNavBar={true} key="main" component={Main} panHandlers={null} onBack={backPress} direction="vertical" />
           <Scene key="conversation" component={Conversation} title="conversation" />
           <Scene key="post" component={Post} title="post" />
-          <Scene key="profile" component={Profile} title="profile" />
-          <Scene key="kalmap" component={Kalmap} title="Kalmap" />
-          <Scene key="evacuation" component={Evacuation} title="Evacuation" />
-          <Scene key="safetyCheck" component={SafetyCheck} title="Safety Check" />
           <Scene key="write" component={Write} title="Write" direction="vertical" />
           <Scene key="register" component={Register} title="Register"/>
           <Scene key="whatIsARescuer" component={WhatIsARescuer} title="What Is A Rescuer"/>
           <Scene key="capture" component={Capture} title="Capture" />
+          <Scene key="editinfo" component={EditInfo} title="Edit Info" />
+          <Scene key="tutorial" component={Tutorial} title="Tutorial" hideNavBar={true} />
+          <Scene key="register2" component={Register2} title="Register 2" hideNavBar={true} />
+          <Scene key="writeComment" component={WriteComment} title="WriteComment" hideNavBar={true} />
+          <Scene key="viewInMap" component={ViewInMap} title="View Post in Map" hideNavBar={true} />
+          <Scene key="termsAndConditions" component={TermsAndConditions} title="Terms and Conditions" hideNavBar={true} />
         </Scene>
       </Router>
     );

@@ -9,11 +9,23 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.airbnb.android.react.maps.MapsPackage;
-import com.burlap.filetransfer.FileTransferPackage;
+
+// import com.burlap.filetransfer.FileTransferPackage;
 import com.lwansbrough.RCTCamera.RCTCameraPackage;
 import com.mikemonteith.reactnativeandroidcheckbox.CheckboxPackage;
-import com.centaurwarchief.smslistener.SmsListenerPackage;
+// import com.centaurwarchief.smslistener.SmsListenerPackage;
 import com.rhaker.reactnativesmsandroid.RNSmsAndroidPackage;
+import com.burnweb.rnwebview.RNWebViewPackage;
+import com.marianhello.react.BackgroundGeolocationPackage;
+// import io.fullstack.firestack.FirestackPackage;
+
+/*
+// import com.burnweb.rnpermissions.RNPermissionsPackage;
+// import com.mapbox.reactnativemapboxgl.ReactNativeMapboxGLPackage;
+// import com.syarul.rnlocation.RNLocation;
+// import com.tiagojdferreira.RNGeolocationPackage;
+// import com.syarul.rnalocation.RNALocation;
+*/
 
 import java.util.Arrays;
 import java.util.List;
@@ -31,11 +43,19 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
           new MapsPackage(),
-          new FileTransferPackage(),
+          // new FileTransferPackage(),
           new RCTCameraPackage(),
           new CheckboxPackage(),
-          new SmsListenerPackage(),
-          new RNSmsAndroidPackage()
+          // new SmsListenerPackage(),
+          new RNSmsAndroidPackage(),
+          new RNWebViewPackage(),
+          new BackgroundGeolocationPackage()
+          // new FirestackPackage(getApplicationContext())
+          // new RNPermissionsPackage(),
+          // new ReactNativeMapboxGLPackage(),
+          // new RNLocation(),
+          // new RNGeolocationPackage(),
+          // new RNALocation()
         );
     }
   };

@@ -85,14 +85,14 @@ def enableProguardInReleaseBuilds = false
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    buildToolsVersion "23.0.3"
 
     defaultConfig {
         applicationId "com.kalmamity"
         minSdkVersion 16
-        targetSdkVersion 22
-        versionCode 1
-        versionName "1.0"
+        targetSdkVersion 23
+        versionCode 3
+        versionName "0.3"
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
@@ -115,8 +115,6 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled enableProguardInReleaseBuilds
-            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
             signingConfig signingConfigs.release
         }
     }
@@ -140,12 +138,24 @@ dependencies {
     compile "com.android.support:appcompat-v7:23.0.1"
     compile "com.facebook.react:react-native:+"  // From node_modules
     compile project(':react-native-maps')
-    compile project(':RNFileTransfer')
+    // compile project(':RNFileTransfer')
     compile project(':react-native-camera')
     compile project(':react-native-android-checkbox')
-    compile project(':react-native-android-sms-listener')
+    // compile project(':react-native-android-sms-listener')
     compile project(':react-native-sms-android')
+    compile project(':RNWebView')
+    // compile 'com.google.android.gms:play-services:9.6.1'
+    compile project(':react-native-mauron85-background-geolocation')
+    // compile project(':react-native-firestack')
+    // compile 'com.google.firebase:firebase-core:9.6.1'
+    // compile project(':RNPermissionsModule')
+    // compile project(':reactnativemapboxgl')
+    // compile project(':RNLocation')
+    // compile project(':rn-geolocation')
+    // compile project(':RNAlocation')
 }
+
+// apply plugin: 'com.google.gms.google-services'
 
 // Run this once to be able to run the application with BUCK
 // puts all compile dependencies into folder libs for BUCK to use

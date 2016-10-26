@@ -1,0 +1,504 @@
+Starting JS server...
+Running C:\Users\Ralph Christopher\AppData\Local\Android\android-sdk/platform-tools/adb reverse tcp:8081 tcp:8081
+Could not run adb reverse: Command failed: C:\Users\Ralph Christopher\AppData\Local\Android\android-sdk/platform-tools/adb reverse tcp:8081 tcp:8081
+Building and installing the app on the device (cd android && gradlew.bat installDebug...
+:RNWebView:compileLint
+:RNWebView:copyReleaseLint UP-TO-DATE
+:RNWebView:preBuild UP-TO-DATE
+:RNWebView:preReleaseBuild UP-TO-DATE
+:RNWebView:checkReleaseManifest
+:RNWebView:preDebugAndroidTestBuild UP-TO-DATE
+:RNWebView:preDebugBuild UP-TO-DATE
+:RNWebView:preDebugUnitTestBuild UP-TO-DATE
+:RNWebView:preReleaseUnitTestBuild UP-TO-DATE
+:RNWebView:prepareComAndroidSupportAppcompatV72301Library UP-TO-DATE
+:RNWebView:prepareComAndroidSupportRecyclerviewV72301Library UP-TO-DATE
+:RNWebView:prepareComAndroidSupportSupportV42321Library UP-TO-DATE
+:RNWebView:prepareComFacebookFrescoDrawee0110Library UP-TO-DATE
+:RNWebView:prepareComFacebookFrescoFbcore0110Library UP-TO-DATE
+:RNWebView:prepareComFacebookFrescoFresco0110Library UP-TO-DATE
+:RNWebView:prepareComFacebookFrescoImagepipeline0110Library UP-TO-DATE
+:RNWebView:prepareComFacebookFrescoImagepipelineBase0110Library UP-TO-DATE
+:RNWebView:prepareComFacebookFrescoImagepipelineOkhttp30110Library UP-TO-DATE
+:RNWebView:prepareComFacebookReactReactNative0320Library UP-TO-DATE
+:RNWebView:prepareComFacebookSoloaderSoloader010Library UP-TO-DATE
+:RNWebView:prepareOrgWebkitAndroidJscR174650Library UP-TO-DATE
+:RNWebView:prepareReleaseDependencies
+:RNWebView:compileReleaseAidl UP-TO-DATE
+:RNWebView:compileReleaseRenderscript UP-TO-DATE
+:RNWebView:generateReleaseBuildConfig UP-TO-DATE
+:RNWebView:generateReleaseAssets UP-TO-DATE
+:RNWebView:mergeReleaseAssets UP-TO-DATE
+:RNWebView:generateReleaseResValues UP-TO-DATE
+:RNWebView:generateReleaseResources UP-TO-DATE
+:RNWebView:mergeReleaseResources UP-TO-DATE
+:RNWebView:processReleaseManifest UP-TO-DATE
+:RNWebView:processReleaseResources UP-TO-DATE
+:RNWebView:generateReleaseSources UP-TO-DATE
+:RNWebView:processReleaseJavaRes UP-TO-DATE
+:RNWebView:compileReleaseJavaWithJavac UP-TO-DATE
+:RNWebView:extractReleaseAnnotations UP-TO-DATE
+:RNWebView:mergeReleaseProguardFiles UP-TO-DATE
+:RNWebView:packageReleaseJar UP-TO-DATE
+:RNWebView:compileReleaseNdk UP-TO-DATE
+:RNWebView:packageReleaseJniLibs UP-TO-DATE
+:RNWebView:packageReleaseLocalJar UP-TO-DATE
+:RNWebView:packageReleaseRenderscript UP-TO-DATE
+:RNWebView:packageReleaseResources UP-TO-DATE
+:RNWebView:bundleRelease UP-TO-DATE
+:app:preBuild UP-TO-DATE
+:app:preDebugBuild UP-TO-DATE
+:app:checkDebugManifest
+:app:preReleaseBuild UP-TO-DATE
+:react-native-android-checkbox:compileLint
+:react-native-android-checkbox:copyReleaseLint UP-TO-DATE
+:react-native-android-checkbox:preBuild UP-TO-DATE
+:react-native-android-checkbox:preReleaseBuild UP-TO-DATE
+:react-native-android-checkbox:checkReleaseManifest
+:react-native-android-checkbox:preDebugAndroidTestBuild UP-TO-DATE
+:react-native-android-checkbox:preDebugBuild UP-TO-DATE
+:react-native-android-checkbox:preDebugUnitTestBuild UP-TO-DATE
+:react-native-android-checkbox:preReleaseUnitTestBuild UP-TO-DATE
+:react-native-android-checkbox:prepareComAndroidSupportAnimatedVectorDrawable2321Library UP-TO-DATE
+:react-native-android-checkbox:prepareComAndroidSupportAppcompatV72321Library UP-TO-DATE
+:react-native-android-checkbox:prepareComAndroidSupportRecyclerviewV72301Library UP-TO-DATE
+:react-native-android-checkbox:prepareComAndroidSupportSupportV42321Library UP-TO-DATE
+:react-native-android-checkbox:prepareComAndroidSupportSupportVectorDrawable2321Library UP-TO-DATE
+:react-native-android-checkbox:prepareComFacebookFrescoDrawee0110Library UP-TO-DATE
+:react-native-android-checkbox:prepareComFacebookFrescoFbcore0110Library UP-TO-DATE
+:react-native-android-checkbox:prepareComFacebookFrescoFresco0110Library UP-TO-DATE
+:react-native-android-checkbox:prepareComFacebookFrescoImagepipeline0110Library UP-TO-DATE
+:react-native-android-checkbox:prepareComFacebookFrescoImagepipelineBase0110Library UP-TO-DATE
+:react-native-android-checkbox:prepareComFacebookFrescoImagepipelineOkhttp30110Library UP-TO-DATE
+:react-native-android-checkbox:prepareComFacebookReactReactNative0320Library UP-TO-DATE
+:react-native-android-checkbox:prepareComFacebookSoloaderSoloader010Library UP-TO-DATE
+:react-native-android-checkbox:prepareOrgWebkitAndroidJscR174650Library UP-TO-DATE
+:react-native-android-checkbox:prepareReleaseDependencies
+:react-native-android-checkbox:compileReleaseAidl UP-TO-DATE
+:react-native-android-checkbox:compileReleaseRenderscript UP-TO-DATE
+:react-native-android-checkbox:generateReleaseBuildConfig UP-TO-DATE
+:react-native-android-checkbox:generateReleaseAssets UP-TO-DATE
+:react-native-android-checkbox:mergeReleaseAssets UP-TO-DATE
+:react-native-android-checkbox:generateReleaseResValues UP-TO-DATE
+:react-native-android-checkbox:generateReleaseResources UP-TO-DATE
+:react-native-android-checkbox:mergeReleaseResources UP-TO-DATE
+:react-native-android-checkbox:processReleaseManifest UP-TO-DATE
+:react-native-android-checkbox:processReleaseResources UP-TO-DATE
+:react-native-android-checkbox:generateReleaseSources UP-TO-DATE
+:react-native-android-checkbox:processReleaseJavaRes UP-TO-DATE
+:react-native-android-checkbox:compileReleaseJavaWithJavac UP-TO-DATE
+:react-native-android-checkbox:extractReleaseAnnotations UP-TO-DATE
+:react-native-android-checkbox:mergeReleaseProguardFiles UP-TO-DATE
+:react-native-android-checkbox:packageReleaseJar UP-TO-DATE
+:react-native-android-checkbox:compileReleaseNdk UP-TO-DATE
+:react-native-android-checkbox:packageReleaseJniLibs UP-TO-DATE
+:react-native-android-checkbox:packageReleaseLocalJar UP-TO-DATE
+:react-native-android-checkbox:packageReleaseRenderscript UP-TO-DATE
+:react-native-android-checkbox:packageReleaseResources UP-TO-DATE
+:react-native-android-checkbox:bundleRelease UP-TO-DATE
+:react-native-camera:compileLint
+:react-native-camera:copyReleaseLint UP-TO-DATE
+:react-native-camera:preBuild UP-TO-DATE
+:react-native-camera:preReleaseBuild UP-TO-DATE
+:react-native-camera:checkReleaseManifest
+:react-native-camera:preDebugAndroidTestBuild UP-TO-DATE
+:react-native-camera:preDebugBuild UP-TO-DATE
+:react-native-camera:preDebugUnitTestBuild UP-TO-DATE
+:react-native-camera:preReleaseUnitTestBuild UP-TO-DATE
+:react-native-camera:prepareComAndroidSupportAppcompatV72301Library UP-TO-DATE
+:react-native-camera:prepareComAndroidSupportRecyclerviewV72301Library UP-TO-DATE
+:react-native-camera:prepareComAndroidSupportSupportV42301Library UP-TO-DATE
+:react-native-camera:prepareComFacebookFrescoDrawee081Library UP-TO-DATE
+:react-native-camera:prepareComFacebookFrescoFbcore081Library UP-TO-DATE
+:react-native-camera:prepareComFacebookFrescoFresco081Library UP-TO-DATE
+:react-native-camera:prepareComFacebookFrescoImagepipeline081Library UP-TO-DATE
+:react-native-camera:prepareComFacebookFrescoImagepipelineOkhttp081Library UP-TO-DATE
+:react-native-camera:prepareComFacebookReactReactNative0191Library UP-TO-DATE
+:react-native-camera:prepareOrgWebkitAndroidJscR174650Library UP-TO-DATE
+:react-native-camera:prepareReleaseDependencies
+:react-native-camera:compileReleaseAidl UP-TO-DATE
+:react-native-camera:compileReleaseRenderscript UP-TO-DATE
+:react-native-camera:generateReleaseBuildConfig UP-TO-DATE
+:react-native-camera:generateReleaseAssets UP-TO-DATE
+:react-native-camera:mergeReleaseAssets UP-TO-DATE
+:react-native-camera:generateReleaseResValues UP-TO-DATE
+:react-native-camera:generateReleaseResources UP-TO-DATE
+:react-native-camera:mergeReleaseResources UP-TO-DATE
+:react-native-camera:processReleaseManifest UP-TO-DATE
+:react-native-camera:processReleaseResources UP-TO-DATE
+:react-native-camera:generateReleaseSources UP-TO-DATE
+:react-native-camera:processReleaseJavaRes UP-TO-DATE
+:react-native-camera:compileReleaseJavaWithJavac UP-TO-DATE
+:react-native-camera:extractReleaseAnnotations UP-TO-DATE
+:react-native-camera:mergeReleaseProguardFiles UP-TO-DATE
+:react-native-camera:packageReleaseJar UP-TO-DATE
+:react-native-camera:compileReleaseNdk UP-TO-DATE
+:react-native-camera:packageReleaseJniLibs UP-TO-DATE
+:react-native-camera:packageReleaseLocalJar UP-TO-DATE
+:react-native-camera:packageReleaseRenderscript UP-TO-DATE
+:react-native-camera:packageReleaseResources UP-TO-DATE
+:react-native-camera:bundleRelease UP-TO-DATE
+:react-native-maps:compileLint
+:react-native-maps:copyReleaseLint UP-TO-DATE
+:react-native-maps:preBuild UP-TO-DATE
+:react-native-maps:preReleaseBuild UP-TO-DATE
+:react-native-maps:checkReleaseManifest
+:react-native-maps:preDebugAndroidTestBuild UP-TO-DATE
+:react-native-maps:preDebugBuild UP-TO-DATE
+:react-native-maps:preDebugUnitTestBuild UP-TO-DATE
+:react-native-maps:preReleaseUnitTestBuild UP-TO-DATE
+:react-native-maps:prepareComAndroidSupportAppcompatV72301Library UP-TO-DATE
+:react-native-maps:prepareComAndroidSupportRecyclerviewV72301Library UP-TO-DATE
+:react-native-maps:prepareComAndroidSupportSupportV42321Library UP-TO-DATE
+:react-native-maps:prepareComFacebookFrescoDrawee0110Library UP-TO-DATE
+:react-native-maps:prepareComFacebookFrescoFbcore0110Library UP-TO-DATE
+:react-native-maps:prepareComFacebookFrescoFresco0110Library UP-TO-DATE
+:react-native-maps:prepareComFacebookFrescoImagepipeline0110Library UP-TO-DATE
+:react-native-maps:prepareComFacebookFrescoImagepipelineBase0110Library UP-TO-DATE
+:react-native-maps:prepareComFacebookFrescoImagepipelineOkhttp30110Library UP-TO-DATE
+:react-native-maps:prepareComFacebookReactReactNative0320Library UP-TO-DATE
+:react-native-maps:prepareComFacebookSoloaderSoloader010Library UP-TO-DATE
+:react-native-maps:prepareComGoogleAndroidGmsPlayServicesBase840Library UP-TO-DATE
+:react-native-maps:prepareComGoogleAndroidGmsPlayServicesBasement840Library UP-TO-DATE
+:react-native-maps:prepareComGoogleAndroidGmsPlayServicesMaps840Library UP-TO-DATE
+:react-native-maps:prepareOrgWebkitAndroidJscR174650Library UP-TO-DATE
+:react-native-maps:prepareReleaseDependencies
+:react-native-maps:compileReleaseAidl UP-TO-DATE
+:react-native-maps:compileReleaseRenderscript UP-TO-DATE
+:react-native-maps:generateReleaseBuildConfig UP-TO-DATE
+:react-native-maps:generateReleaseAssets UP-TO-DATE
+:react-native-maps:mergeReleaseAssets UP-TO-DATE
+:react-native-maps:generateReleaseResValues UP-TO-DATE
+:react-native-maps:generateReleaseResources UP-TO-DATE
+:react-native-maps:mergeReleaseResources UP-TO-DATE
+:react-native-maps:processReleaseManifest UP-TO-DATE
+:react-native-maps:processReleaseResources UP-TO-DATE
+:react-native-maps:generateReleaseSources UP-TO-DATE
+:react-native-maps:processReleaseJavaRes UP-TO-DATE
+:react-native-maps:compileReleaseJavaWithJavac UP-TO-DATE
+:react-native-maps:extractReleaseAnnotations UP-TO-DATE
+:react-native-maps:mergeReleaseProguardFiles UP-TO-DATE
+:react-native-maps:packageReleaseJar UP-TO-DATE
+:react-native-maps:compileReleaseNdk UP-TO-DATE
+:react-native-maps:packageReleaseJniLibs UP-TO-DATE
+:react-native-maps:packageReleaseLocalJar UP-TO-DATE
+:react-native-maps:packageReleaseRenderscript UP-TO-DATE
+:react-native-maps:packageReleaseResources UP-TO-DATE
+:react-native-maps:bundleRelease UP-TO-DATE
+:react-native-mauron85-background-geolocation:compileLint
+:react-native-mauron85-background-geolocation:copyReleaseLint UP-TO-DATE
+:react-native-mauron85-background-geolocation:preBuild UP-TO-DATE
+:react-native-mauron85-background-geolocation:preReleaseBuild UP-TO-DATE
+:react-native-mauron85-background-geolocation:checkReleaseManifest
+:react-native-mauron85-background-geolocation:preDebugAndroidTestBuild UP-TO-DATE
+:react-native-mauron85-background-geolocation:preDebugBuild UP-TO-DATE
+:react-native-mauron85-background-geolocation:preDebugUnitTestBuild UP-TO-DATE
+:react-native-mauron85-background-geolocation:preReleaseUnitTestBuild UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComAndroidSupportAppcompatV72301Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComAndroidSupportRecyclerviewV72301Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComAndroidSupportSupportCompat2421Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComAndroidSupportSupportCoreUi2421Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComAndroidSupportSupportCoreUtils2421Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComAndroidSupportSupportFragment2421Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComAndroidSupportSupportMediaCompat2421Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComAndroidSupportSupportV42421Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComFacebookFrescoDrawee0110Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComFacebookFrescoFbcore0110Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComFacebookFrescoFresco0110Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComFacebookFrescoImagepipeline0110Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComFacebookFrescoImagepipelineBase0110Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComFacebookFrescoImagepipelineOkhttp30110Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComFacebookReactReactNative0320Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComFacebookSoloaderSoloader010Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComGoogleAndroidGmsPlayServicesBase940Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComGoogleAndroidGmsPlayServicesBasement940Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComGoogleAndroidGmsPlayServicesLocation940Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComGoogleAndroidGmsPlayServicesTasks940Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareOrgWebkitAndroidJscR174650Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareReleaseDependencies
+:react-native-mauron85-background-geolocation:compileReleaseAidl UP-TO-DATE
+:react-native-mauron85-background-geolocation:compileReleaseRenderscript UP-TO-DATE
+:react-native-mauron85-background-geolocation:generateReleaseBuildConfig UP-TO-DATE
+:react-native-mauron85-background-geolocation:generateReleaseAssets UP-TO-DATE
+:react-native-mauron85-background-geolocation:mergeReleaseAssets UP-TO-DATE
+:react-native-mauron85-background-geolocation:generateReleaseResValues UP-TO-DATE
+:react-native-mauron85-background-geolocation:generateReleaseResources UP-TO-DATE
+:react-native-mauron85-background-geolocation:mergeReleaseResources
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-mdpi-v4\common_plus_signin_btn_text_light_focused.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-tvdpi-v4\common_plus_signin_btn_text_light_focused.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-mdpi-v4\common_google_signin_btn_text_dark_normal.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-xxhdpi-v4\common_google_signin_btn_text_dark_normal.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-xxhdpi-v4\common_plus_signin_btn_text_dark_disabled.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-xhdpi-v4\common_plus_signin_btn_icon_dark_focused.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-hdpi-v4\common_plus_signin_btn_text_dark_pressed.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-hdpi-v4\common_google_signin_btn_icon_light_focused.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-hdpi-v4\common_plus_signin_btn_icon_light_disabled.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-xxhdpi-v4\common_plus_signin_btn_icon_light_normal.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-tvdpi-v4\common_google_signin_btn_icon_dark_pressed.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-xxhdpi-v4\common_google_signin_btn_text_light_normal.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-xxhdpi-v4\common_plus_signin_btn_icon_light_focused.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-mdpi-v4\common_google_signin_btn_text_dark_pressed.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-xhdpi-v4\common_plus_signin_btn_text_light_focused.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-tvdpi-v4\common_google_signin_btn_icon_dark_disabled.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-hdpi-v4\common_google_signin_btn_icon_light_normal.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-tvdpi-v4\common_plus_signin_btn_icon_dark_normal.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-xxhdpi-v4\common_google_signin_btn_text_light_focused.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-xhdpi-v4\common_plus_signin_btn_icon_light_disabled.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-xhdpi-v4\common_google_signin_btn_icon_light_disabled.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-xxhdpi-v4\common_plus_signin_btn_icon_dark_normal.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-tvdpi-v4\common_plus_signin_btn_icon_light_normal.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-xxhdpi-v4\common_google_signin_btn_icon_light_focused.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-tvdpi-v4\common_plus_signin_btn_icon_light_pressed.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-mdpi-v4\common_google_signin_btn_text_light_focused.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-mdpi-v4\common_google_signin_btn_text_dark_disabled.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-xxhdpi-v4\common_plus_signin_btn_text_light_focused.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-mdpi-v4\common_google_signin_btn_text_dark_focused.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-mdpi-v4\common_plus_signin_btn_text_dark_pressed.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-mdpi-v4\common_plus_signin_btn_text_light_pressed.9.png ERROR: Unable to open PNG file
+AAPT: C:\Users\Ralph Christopher\Desktop\Ariel\Kalmamity\node_modules\react-native-mauron85-background-geolocation\android\lib\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\res\drawable-tvdpi-v4\common_plus_signin_btn_text_dark_focused.9.png ERROR: Unable to open PNG file
+:react-native-mauron85-background-geolocation:processReleaseManifest
+:react-native-mauron85-background-geolocation:processReleaseResources FAILED
+
+BUILD FAILED
+
+Total time: 40.308 secs
+Could not install the app on the device, read the error above for details.
+Make sure you have an Android emulator running or a device connected and have
+set up your Android development environment:
+https://facebook.github.io/react-native/docs/android-setup.html
+Starting JS server...
+Running C:\Users\Ralph Christopher\AppData\Local\Android\android-sdk/platform-tools/adb reverse tcp:8081 tcp:8081
+Could not run adb reverse: Command failed: C:\Users\Ralph Christopher\AppData\Local\Android\android-sdk/platform-tools/adb reverse tcp:8081 tcp:8081
+Building and installing the app on the device (cd android && gradlew.bat installDebug...
+:RNWebView:compileLint
+:RNWebView:copyReleaseLint UP-TO-DATE
+:RNWebView:preBuild UP-TO-DATE
+:RNWebView:preReleaseBuild UP-TO-DATE
+:RNWebView:checkReleaseManifest
+:RNWebView:preDebugAndroidTestBuild UP-TO-DATE
+:RNWebView:preDebugBuild UP-TO-DATE
+:RNWebView:preDebugUnitTestBuild UP-TO-DATE
+:RNWebView:preReleaseUnitTestBuild UP-TO-DATE
+:RNWebView:prepareComAndroidSupportAppcompatV72301Library UP-TO-DATE
+:RNWebView:prepareComAndroidSupportRecyclerviewV72301Library UP-TO-DATE
+:RNWebView:prepareComAndroidSupportSupportV42321Library UP-TO-DATE
+:RNWebView:prepareComFacebookFrescoDrawee0110Library UP-TO-DATE
+:RNWebView:prepareComFacebookFrescoFbcore0110Library UP-TO-DATE
+:RNWebView:prepareComFacebookFrescoFresco0110Library UP-TO-DATE
+:RNWebView:prepareComFacebookFrescoImagepipeline0110Library UP-TO-DATE
+:RNWebView:prepareComFacebookFrescoImagepipelineBase0110Library UP-TO-DATE
+:RNWebView:prepareComFacebookFrescoImagepipelineOkhttp30110Library UP-TO-DATE
+:RNWebView:prepareComFacebookReactReactNative0320Library UP-TO-DATE
+:RNWebView:prepareComFacebookSoloaderSoloader010Library UP-TO-DATE
+:RNWebView:prepareOrgWebkitAndroidJscR174650Library UP-TO-DATE
+:RNWebView:prepareReleaseDependencies
+:RNWebView:compileReleaseAidl UP-TO-DATE
+:RNWebView:compileReleaseRenderscript UP-TO-DATE
+:RNWebView:generateReleaseBuildConfig UP-TO-DATE
+:RNWebView:generateReleaseAssets UP-TO-DATE
+:RNWebView:mergeReleaseAssets UP-TO-DATE
+:RNWebView:generateReleaseResValues UP-TO-DATE
+:RNWebView:generateReleaseResources UP-TO-DATE
+:RNWebView:mergeReleaseResources UP-TO-DATE
+:RNWebView:processReleaseManifest UP-TO-DATE
+:RNWebView:processReleaseResources UP-TO-DATE
+:RNWebView:generateReleaseSources UP-TO-DATE
+:RNWebView:processReleaseJavaRes UP-TO-DATE
+:RNWebView:compileReleaseJavaWithJavac UP-TO-DATE
+:RNWebView:extractReleaseAnnotations UP-TO-DATE
+:RNWebView:mergeReleaseProguardFiles UP-TO-DATE
+:RNWebView:packageReleaseJar UP-TO-DATE
+:RNWebView:compileReleaseNdk UP-TO-DATE
+:RNWebView:packageReleaseJniLibs UP-TO-DATE
+:RNWebView:packageReleaseLocalJar UP-TO-DATE
+:RNWebView:packageReleaseRenderscript UP-TO-DATE
+:RNWebView:packageReleaseResources UP-TO-DATE
+:RNWebView:bundleRelease UP-TO-DATE
+:app:preBuild UP-TO-DATE
+:app:preDebugBuild UP-TO-DATE
+:app:checkDebugManifest
+:app:preReleaseBuild UP-TO-DATE
+:react-native-android-checkbox:compileLint
+:react-native-android-checkbox:copyReleaseLint UP-TO-DATE
+:react-native-android-checkbox:preBuild UP-TO-DATE
+:react-native-android-checkbox:preReleaseBuild UP-TO-DATE
+:react-native-android-checkbox:checkReleaseManifest
+:react-native-android-checkbox:preDebugAndroidTestBuild UP-TO-DATE
+:react-native-android-checkbox:preDebugBuild UP-TO-DATE
+:react-native-android-checkbox:preDebugUnitTestBuild UP-TO-DATE
+:react-native-android-checkbox:preReleaseUnitTestBuild UP-TO-DATE
+:react-native-android-checkbox:prepareComAndroidSupportAnimatedVectorDrawable2321Library UP-TO-DATE
+:react-native-android-checkbox:prepareComAndroidSupportAppcompatV72321Library UP-TO-DATE
+:react-native-android-checkbox:prepareComAndroidSupportRecyclerviewV72301Library UP-TO-DATE
+:react-native-android-checkbox:prepareComAndroidSupportSupportV42321Library UP-TO-DATE
+:react-native-android-checkbox:prepareComAndroidSupportSupportVectorDrawable2321Library UP-TO-DATE
+:react-native-android-checkbox:prepareComFacebookFrescoDrawee0110Library UP-TO-DATE
+:react-native-android-checkbox:prepareComFacebookFrescoFbcore0110Library UP-TO-DATE
+:react-native-android-checkbox:prepareComFacebookFrescoFresco0110Library UP-TO-DATE
+:react-native-android-checkbox:prepareComFacebookFrescoImagepipeline0110Library UP-TO-DATE
+:react-native-android-checkbox:prepareComFacebookFrescoImagepipelineBase0110Library UP-TO-DATE
+:react-native-android-checkbox:prepareComFacebookFrescoImagepipelineOkhttp30110Library UP-TO-DATE
+:react-native-android-checkbox:prepareComFacebookReactReactNative0320Library UP-TO-DATE
+:react-native-android-checkbox:prepareComFacebookSoloaderSoloader010Library UP-TO-DATE
+:react-native-android-checkbox:prepareOrgWebkitAndroidJscR174650Library UP-TO-DATE
+:react-native-android-checkbox:prepareReleaseDependencies
+:react-native-android-checkbox:compileReleaseAidl UP-TO-DATE
+:react-native-android-checkbox:compileReleaseRenderscript UP-TO-DATE
+:react-native-android-checkbox:generateReleaseBuildConfig UP-TO-DATE
+:react-native-android-checkbox:generateReleaseAssets UP-TO-DATE
+:react-native-android-checkbox:mergeReleaseAssets UP-TO-DATE
+:react-native-android-checkbox:generateReleaseResValues UP-TO-DATE
+:react-native-android-checkbox:generateReleaseResources UP-TO-DATE
+:react-native-android-checkbox:mergeReleaseResources UP-TO-DATE
+:react-native-android-checkbox:processReleaseManifest UP-TO-DATE
+:react-native-android-checkbox:processReleaseResources UP-TO-DATE
+:react-native-android-checkbox:generateReleaseSources UP-TO-DATE
+:react-native-android-checkbox:processReleaseJavaRes UP-TO-DATE
+:react-native-android-checkbox:compileReleaseJavaWithJavac UP-TO-DATE
+:react-native-android-checkbox:extractReleaseAnnotations UP-TO-DATE
+:react-native-android-checkbox:mergeReleaseProguardFiles UP-TO-DATE
+:react-native-android-checkbox:packageReleaseJar UP-TO-DATE
+:react-native-android-checkbox:compileReleaseNdk UP-TO-DATE
+:react-native-android-checkbox:packageReleaseJniLibs UP-TO-DATE
+:react-native-android-checkbox:packageReleaseLocalJar UP-TO-DATE
+:react-native-android-checkbox:packageReleaseRenderscript UP-TO-DATE
+:react-native-android-checkbox:packageReleaseResources UP-TO-DATE
+:react-native-android-checkbox:bundleRelease UP-TO-DATE
+:react-native-camera:compileLint
+:react-native-camera:copyReleaseLint UP-TO-DATE
+:react-native-camera:preBuild UP-TO-DATE
+:react-native-camera:preReleaseBuild UP-TO-DATE
+:react-native-camera:checkReleaseManifest
+:react-native-camera:preDebugAndroidTestBuild UP-TO-DATE
+:react-native-camera:preDebugBuild UP-TO-DATE
+:react-native-camera:preDebugUnitTestBuild UP-TO-DATE
+:react-native-camera:preReleaseUnitTestBuild UP-TO-DATE
+:react-native-camera:prepareComAndroidSupportAppcompatV72301Library UP-TO-DATE
+:react-native-camera:prepareComAndroidSupportRecyclerviewV72301Library UP-TO-DATE
+:react-native-camera:prepareComAndroidSupportSupportV42301Library UP-TO-DATE
+:react-native-camera:prepareComFacebookFrescoDrawee081Library UP-TO-DATE
+:react-native-camera:prepareComFacebookFrescoFbcore081Library UP-TO-DATE
+:react-native-camera:prepareComFacebookFrescoFresco081Library UP-TO-DATE
+:react-native-camera:prepareComFacebookFrescoImagepipeline081Library UP-TO-DATE
+:react-native-camera:prepareComFacebookFrescoImagepipelineOkhttp081Library UP-TO-DATE
+:react-native-camera:prepareComFacebookReactReactNative0191Library UP-TO-DATE
+:react-native-camera:prepareOrgWebkitAndroidJscR174650Library UP-TO-DATE
+:react-native-camera:prepareReleaseDependencies
+:react-native-camera:compileReleaseAidl UP-TO-DATE
+:react-native-camera:compileReleaseRenderscript UP-TO-DATE
+:react-native-camera:generateReleaseBuildConfig UP-TO-DATE
+:react-native-camera:generateReleaseAssets UP-TO-DATE
+:react-native-camera:mergeReleaseAssets UP-TO-DATE
+:react-native-camera:generateReleaseResValues UP-TO-DATE
+:react-native-camera:generateReleaseResources UP-TO-DATE
+:react-native-camera:mergeReleaseResources UP-TO-DATE
+:react-native-camera:processReleaseManifest UP-TO-DATE
+:react-native-camera:processReleaseResources UP-TO-DATE
+:react-native-camera:generateReleaseSources UP-TO-DATE
+:react-native-camera:processReleaseJavaRes UP-TO-DATE
+:react-native-camera:compileReleaseJavaWithJavac UP-TO-DATE
+:react-native-camera:extractReleaseAnnotations UP-TO-DATE
+:react-native-camera:mergeReleaseProguardFiles UP-TO-DATE
+:react-native-camera:packageReleaseJar UP-TO-DATE
+:react-native-camera:compileReleaseNdk UP-TO-DATE
+:react-native-camera:packageReleaseJniLibs UP-TO-DATE
+:react-native-camera:packageReleaseLocalJar UP-TO-DATE
+:react-native-camera:packageReleaseRenderscript UP-TO-DATE
+:react-native-camera:packageReleaseResources UP-TO-DATE
+:react-native-camera:bundleRelease UP-TO-DATE
+:react-native-maps:compileLint
+:react-native-maps:copyReleaseLint UP-TO-DATE
+:react-native-maps:preBuild UP-TO-DATE
+:react-native-maps:preReleaseBuild UP-TO-DATE
+:react-native-maps:checkReleaseManifest
+:react-native-maps:preDebugAndroidTestBuild UP-TO-DATE
+:react-native-maps:preDebugBuild UP-TO-DATE
+:react-native-maps:preDebugUnitTestBuild UP-TO-DATE
+:react-native-maps:preReleaseUnitTestBuild UP-TO-DATE
+:react-native-maps:prepareComAndroidSupportAppcompatV72301Library UP-TO-DATE
+:react-native-maps:prepareComAndroidSupportRecyclerviewV72301Library UP-TO-DATE
+:react-native-maps:prepareComAndroidSupportSupportV42321Library UP-TO-DATE
+:react-native-maps:prepareComFacebookFrescoDrawee0110Library UP-TO-DATE
+:react-native-maps:prepareComFacebookFrescoFbcore0110Library UP-TO-DATE
+:react-native-maps:prepareComFacebookFrescoFresco0110Library UP-TO-DATE
+:react-native-maps:prepareComFacebookFrescoImagepipeline0110Library UP-TO-DATE
+:react-native-maps:prepareComFacebookFrescoImagepipelineBase0110Library UP-TO-DATE
+:react-native-maps:prepareComFacebookFrescoImagepipelineOkhttp30110Library UP-TO-DATE
+:react-native-maps:prepareComFacebookReactReactNative0320Library UP-TO-DATE
+:react-native-maps:prepareComFacebookSoloaderSoloader010Library UP-TO-DATE
+:react-native-maps:prepareComGoogleAndroidGmsPlayServicesBase840Library UP-TO-DATE
+:react-native-maps:prepareComGoogleAndroidGmsPlayServicesBasement840Library UP-TO-DATE
+:react-native-maps:prepareComGoogleAndroidGmsPlayServicesMaps840Library UP-TO-DATE
+:react-native-maps:prepareOrgWebkitAndroidJscR174650Library UP-TO-DATE
+:react-native-maps:prepareReleaseDependencies
+:react-native-maps:compileReleaseAidl UP-TO-DATE
+:react-native-maps:compileReleaseRenderscript UP-TO-DATE
+:react-native-maps:generateReleaseBuildConfig UP-TO-DATE
+:react-native-maps:generateReleaseAssets UP-TO-DATE
+:react-native-maps:mergeReleaseAssets UP-TO-DATE
+:react-native-maps:generateReleaseResValues UP-TO-DATE
+:react-native-maps:generateReleaseResources UP-TO-DATE
+:react-native-maps:mergeReleaseResources UP-TO-DATE
+:react-native-maps:processReleaseManifest UP-TO-DATE
+:react-native-maps:processReleaseResources UP-TO-DATE
+:react-native-maps:generateReleaseSources UP-TO-DATE
+:react-native-maps:processReleaseJavaRes UP-TO-DATE
+:react-native-maps:compileReleaseJavaWithJavac UP-TO-DATE
+:react-native-maps:extractReleaseAnnotations UP-TO-DATE
+:react-native-maps:mergeReleaseProguardFiles UP-TO-DATE
+:react-native-maps:packageReleaseJar UP-TO-DATE
+:react-native-maps:compileReleaseNdk UP-TO-DATE
+:react-native-maps:packageReleaseJniLibs UP-TO-DATE
+:react-native-maps:packageReleaseLocalJar UP-TO-DATE
+:react-native-maps:packageReleaseRenderscript UP-TO-DATE
+:react-native-maps:packageReleaseResources UP-TO-DATE
+:react-native-maps:bundleRelease UP-TO-DATE
+:react-native-mauron85-background-geolocation:compileLint
+:react-native-mauron85-background-geolocation:copyReleaseLint UP-TO-DATE
+:react-native-mauron85-background-geolocation:preBuild UP-TO-DATE
+:react-native-mauron85-background-geolocation:preReleaseBuild UP-TO-DATE
+:react-native-mauron85-background-geolocation:checkReleaseManifest
+:react-native-mauron85-background-geolocation:preDebugAndroidTestBuild UP-TO-DATE
+:react-native-mauron85-background-geolocation:preDebugBuild UP-TO-DATE
+:react-native-mauron85-background-geolocation:preDebugUnitTestBuild UP-TO-DATE
+:react-native-mauron85-background-geolocation:preReleaseUnitTestBuild UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComAndroidSupportAppcompatV72301Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComAndroidSupportRecyclerviewV72301Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComAndroidSupportSupportCompat2421Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComAndroidSupportSupportCoreUi2421Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComAndroidSupportSupportCoreUtils2421Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComAndroidSupportSupportFragment2421Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComAndroidSupportSupportMediaCompat2421Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComAndroidSupportSupportV42421Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComFacebookFrescoDrawee0110Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComFacebookFrescoFbcore0110Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComFacebookFrescoFresco0110Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComFacebookFrescoImagepipeline0110Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComFacebookFrescoImagepipelineBase0110Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComFacebookFrescoImagepipelineOkhttp30110Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComFacebookReactReactNative0320Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComFacebookSoloaderSoloader010Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComGoogleAndroidGmsPlayServicesBase940Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComGoogleAndroidGmsPlayServicesBasement940Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComGoogleAndroidGmsPlayServicesLocation940Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareComGoogleAndroidGmsPlayServicesTasks940Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareOrgWebkitAndroidJscR174650Library UP-TO-DATE
+:react-native-mauron85-background-geolocation:prepareReleaseDependencies
+:react-native-mauron85-background-geolocation:compileReleaseAidl UP-TO-DATE
+:react-native-mauron85-background-geolocation:compileReleaseRenderscript UP-TO-DATE
+:react-native-mauron85-background-geolocation:generateReleaseBuildConfig UP-TO-DATE
+:react-native-mauron85-background-geolocation:generateReleaseAssets UP-TO-DATE
+:react-native-mauron85-background-geolocation:mergeReleaseAssets UP-TO-DATE
+:react-native-mauron85-background-geolocation:generateReleaseResValues UP-TO-DATE
+:react-native-mauron85-background-geolocation:generateReleaseResources UP-TO-DATE
+:react-native-mauron85-background-geolocation:mergeReleaseResources UP-TO-DATE
+:react-native-mauron85-background-geolocation:processReleaseManifest UP-TO-DATE
+:react-native-mauron85-background-geolocation:processReleaseResources FAILED
+
+BUILD FAILED
+
+Total time: 58.336 secs
+Could not install the app on the device, read the error above for details.
+Make sure you have an Android emulator running or a device connected and have
+set up your Android development environment:
+https://facebook.github.io/react-native/docs/android-setup.html

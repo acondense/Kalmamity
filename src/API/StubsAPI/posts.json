@@ -6,7 +6,18 @@
     "date": "9/13/2016",
     "location": "Manila, PH",
     "body": "Erap suspend na please.",
+    "uri": "http://media.philstar.com/images/the-philippine-star/headlines/20150621/start-rainy-season-habagat-cyclone-6.jpg",
     "likes": 2,
+    "comments": [
+      {
+        "username": "Red Periabras",
+        "body": "So niceee!",
+      },
+      {
+        "username": "Ariel Conde",
+        "body": "Fanta stick!"
+      }
+    ]
   },
   {
     "userId": 3,
