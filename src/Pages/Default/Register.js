@@ -35,31 +35,30 @@ export default class Register extends Component {
     }
   }
 
-  _sendSMS() {
-    SmsAndroid.sms(
-      '21589593', // phone number to send sms to
-      'YES', // sms body
-      'sendDirect', // sendDirect or sendIndirect
-      (err, message) => {
-        if (err){
-          console.log("error");
-        } else {
-          console.log(message); // callback message
-        }
-      }
-    );
+  isGlobe(number) {
+    var digits = number[1] + '' + number[2];
+    if (digits == 5 || digits == 6 || digits == 15 ||
+      digits == 16 || digits == 17 || digits == 26 ||
+      digits == 27 || digits == 35 || digits == 36 ||
+      digits == 45 || digits == 75 || digits == 94 ||
+      digits == 95 || digits == 96 || digits == 97 ||
+      digits == 76 || digits == 77 || digits == 78 ||
+      digits == 79 || digits == 37)
+      return true;
+    else
+      return false;
   }
 
   _handleRegisterBtn() {
 
-    // check if all fields is fulfilled
-    if (this.state.name.trim() == ""
-        || this.state.contactNo.trim() == ""
-        || this.state.email.trim() == ""
-        || this.state.password.trim()) {
-      alert("Please complete the fields.");
-      return;
-    }
+    // // check if all fields is fulfilled
+    // if (this.state.name.trim() == ""
+    //     || this.state.contactNo.trim() == ""
+    //     || this.state.email.trim() == ""
+    //     || this.state.password.trim()) {
+    //   alert("Please complete the fields.");
+    //   return;
+    // }
 
     var tempContact = this.state.contactNo;
 
@@ -74,7 +73,7 @@ export default class Register extends Component {
 
     // check numbers in 09269493263 format
     else if (tempContact[0] == '0' && tempContact[1] == '9' && tempContact.length == 11) {
-      tempContact = tempContact(1, tempContact.length);
+      tempContact = tempContact.slice(1, tempContact.length);
     }
 
     // check numbers in format of 9269493263
@@ -96,6 +95,9 @@ export default class Register extends Component {
       contactNo: tempContact
     });
 
+    var sendTo = this.isGlobe(tempContact) == true ? '21589965' : '29290589965';
+
+    // return;
 
     // run filtering here
     if (1 != 1) {
@@ -106,14 +108,44 @@ export default class Register extends Component {
         contactNo: this.state.contactNo,
         email: this.state.email,
         password: this.state.password,
-        isRescuer: this.state.checkBoxValue
-      }, function(error) {
+        isRescuer: this.state.checkBoxValue,
+        lat: 0,
+        lon: 0,
+      }, function(error) {  
         if (error) {
           alert("Oopss something unexcpected happens");
         } else {
+
+          // fetch('http://mambacodes.hol.es/KalmamityServer/pushNewUser', {
+          //   method: 'GET',
+          //   headers: {
+          //     'Accept': 'application/json',
+          //     'Content-Type': 'application/json',
+          //   },
+          //   body: JSON.stringify({
+          //     name: this.state.name,
+          //     subscriber_number: this.state.contactNo,
+          //     email: this.state.email,
+          //     password: this.state.password,
+          //     isRescuer: this.state.checkBoxValue
+          //   })
+          // });
+
+          SmsAndroid.sms(
+            sendTo, // phone number to send sms to
+            'INFO', // sms body
+            'sendDirect', // sendDirect or sendIndirect
+            (err, message) => {
+              if (err){
+                console.log("error");
+              } else {
+                console.log(message); // callback message
+              }
+            }
+          );
           
           SmsAndroid.sms(
-            '21589593', // phone number to send sms to
+            sendTo, // phone number to send sms to
             'YES', // sms body
             'sendDirect', // sendDirect or sendIndirect
             (err, message) => {

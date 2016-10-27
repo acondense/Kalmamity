@@ -109,6 +109,7 @@ export default class Main extends Component {
                 contactNo: userData.val().contactNo,
                 isRescuer: userData.val().isRescuer,
                 userData: userData.val(),
+                userDataSnap: userData,
               });
               RNStorage.save({
                 key: "userData",
@@ -213,7 +214,7 @@ export default class Main extends Component {
         <Updatefeed tabLabel="ios-paper" location={this.state.location} userData={this.state.userData} posts={this.state.postsUpdate} />
         <Helpfeed tabLabel="ios-help-buoy" location={this.state.location} userData={this.state.userData} posts={this.state.postsHelp} />
         <Kalmap tabLabel="ios-map" location={this.state.location} userData={this.state.userData} postsUpdate={this.state.postsUpdate} postHelp={this.state.postsHelp} />
-        <Profile tabLabel="ios-person" userData={this.state.userData} userpostsupdate={this.state.userpostsupdate} userpostshelp={this.state.userpostshelp} />
+        <Profile tabLabel="ios-person" userDataSnap={this.state.userDataSnap} location={this.state.location} userData={this.state.userData} userpostsupdate={this.state.userpostsupdate} userpostshelp={this.state.userpostshelp} />
       </ScrollableTabView>
     );
   }

@@ -24,11 +24,12 @@ export default class InitialPage extends Component {
       syncInBackground: true
     }).then(ret => {
       // if true the check if login
-      if (ret.data === true)
-        // alert(ret.data);
-        this.checkIfLogin();
-      else
+      if (ret.data === false) {
         Actions.tutorial();
+      }
+      else {
+        this.checkIfLogin();
+      }
     }).catch(err => {
       // if error
       switch (err.name) {
@@ -78,8 +79,10 @@ export default class InitialPage extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Image source={require('../../assets/logo.png')} style={{width: 150, height: 150}}/>
-        <Text style={{fontFamily: "Montserrat-Bold", fontSize: 24, color: "#1abc9c"}}>Kalmamity</Text>
+        <TouchableOpacity onPress={() => this.checkIfLogin()} style={{alignItems: 'center'}}>
+          <Image source={require('../../assets/logo.png')} style={{width: 150, height: 150}}/>
+          <Text style={{fontFamily: "Montserrat-Bold", fontSize: 24, color: "#1abc9c"}}>Kalmamity</Text>
+        </TouchableOpacity>
         
         {/*
         <TouchableOpacity onPress={() => Actions.login()}>

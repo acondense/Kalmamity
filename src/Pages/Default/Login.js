@@ -65,6 +65,9 @@ export default class Login extends Component {
             alert("Don't exists");
           }
         });
+        this.setState({
+          loggingIn: false,
+        })
     }
   }
 

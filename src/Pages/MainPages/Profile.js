@@ -13,7 +13,10 @@ import {Scene, Router, Actions, ActionConst} from 'react-native-router-flux';
 import ScrollableTabView from 'react-native-scrollable-tab-view';
 import Icon from 'react-native-vector-icons/Ionicons';
 import RefreshableFeed from '../../Components/RefreshableFeed';
+import EvilIcon from 'react-native-vector-icons/EvilIcons';
+import MapView from 'react-native-maps';
 // import RefreshablePlaces from '../Components/RefreshablePlaces';
+import { KalmamityDB} from '../../API/Firebase';
 
 import { RNStorage } from '../../API/RNStorage';
 
@@ -66,18 +69,19 @@ class UserInfo extends Component {
         <View style={{backgroundColor: "white", borderRadius: 5, flex: 1}}>
         
         <View style={{padding: 20}}>
-          <Text>Name: </Text>
-          <Text style={{fontSize: 20, fontFamily: "Montserrat-Bold", color: "black", marginBottom: 10,}}>
-            {this.props.userData.name}
-          </Text>
-          <Text>Email: </Text>
-          <Text style={{fontSize: 20, fontFamily: "Montserrat-Bold", color: "black", marginBottom: 10,}}>
-            {this.props.userData.email}
-          </Text>
-          <Text>Phone: </Text>
-          <Text style={{fontSize: 20, fontFamily: "Montserrat-Bold", color: "black", marginBottom: 10,}}>
-            {this.props.userData.contactNo}
-          </Text>
+          
+          <Text style={{fontFamily: 'Montserrat-Bold', color: 'black', fontSize: 16}}>Help:</Text>
+
+          <TouchableOpacity style={{marginTop: 20, marginLeft: 20}} onPress={() => Actions.tutorial()}>
+            <Text style={{color: '#1abc9c', fontFamily: 'Montserrat-Regular', fontSize: 18}}>Tutorial</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={{marginTop: 5, marginLeft: 20}} onPress={() => Actions.whatIsARescuer()}>
+            <Text style={{color: '#1abc9c', fontFamily: 'Montserrat-Regular', fontSize: 18}}>What is a Rescuer?</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={{marginTop: 5, marginLeft: 20}} onPress={() => Actions.termsAndConditions()} >
+            <Text style={{color: '#1abc9c', fontFamily: 'Montserrat-Regular', fontSize: 18}}>Terms and Conditions</Text>
+          </TouchableOpacity>
+
           
           <TouchableOpacity style={{backgroundColor: "black", padding: 10, alignItems: "center", marginTop: 40,}} onPress={() => this._handleLogout()}>
             <Text style={{color: "#1abc9c", fontSize: 24, fontFamily: "Montserrat-Bold"}}>
@@ -92,19 +96,86 @@ class UserInfo extends Component {
 }
 
 class PatrolArea extends Component {
+
+  handleSetPatrolArea() {
+    var updates = {};
+    updates['/users/' + this.props.userDataSnap.key +'/lat' ] = this.props.location.latitude;
+    KalmamityDB.ref().update(updates);
+    updates['/users/' + this.props.userDataSnap.key +'/lon' ] = this.props.location.longitude;
+    KalmamityDB.ref().update(updates);
+
+    // fetch('http://mambacodes.hol.es/KalmamityServer/updatePatrolArea', {
+    //   method: 'GET',
+    //   headers: {
+    //     'Accept': 'application/json',
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify({
+    //     lat: this.props.location.latitude,
+    //     lon: this.props.location.longitude,
+    //     email: this.props.userDataSnap.val().email,
+    //     contactNo: this.props.userDataSnap.val().contactNo
+    //   })
+    // })
+
+  }
+
   render() {
-    if (this.props.userData.isRescuer === true) {
+    if (this.props.userData.isRescuer === true && this.props.location) {
       return (
-        <View style={{alignItems: 'center'}}>
-          <Text>You must be a rescuer to have a patrol area.</Text>
-          <TouchableOpacity>
-            <Text>Request to be a rescuer</Text>
-          </TouchableOpacity>
+        <View style={{flex: 1}}>
+          <View style={{padding: 10}}>
+            <TouchableOpacity style={{padding: 15, backgroundColor: '#1abc9c', alignItems: 'center', borderRadius: 3}}
+              onPress={() => this.handleSetPatrolArea()}
+            >
+              <Text style={{fontFamily: 'Montserrat-Bold', color: 'white'}}>Set current location as your patrol area</Text>
+            </TouchableOpacity>
+            <Text style={{textAlign: 'center', fontSize: 10}}>You will receive notification of help requests within the patrol area.</Text>
+          </View>
+          <View style={styles.mapContainer}>
+            <MapView
+              style={styles.map}
+              initialRegion={{
+                latitude: this.props.location.latitude,
+                longitude: this.props.location.longitude,
+                latitudeDelta: 0.015,
+                longitudeDelta: 0.0121,
+              }}
+              showsUserLocation={true}
+            >
+              <MapView.Circle
+                center={{
+                  latitude: this.props.location.latitude,
+                  longitude: this.props.location.longitude,
+                }}
+                radius={700}
+                fillColor='rgba(26, 188, 156, 0.5)'
+                strokeColor='#1abc9c'
+              />
+            </MapView>
+          </View>
+        </View>
+      )
+    } else if (this.props.userData.isRescuer === true) {
+      return (
+        <View style={{alignItems: 'center', padding: 30}}>
+          <Text style={{textAlign: 'center', fontFamily: 'Montserrat-Regular', fontSize: 16}}>
+            Accessing Location.
+          </Text>
         </View>
       )
     } else {
       return (
-        <Text>You are not a rescuer</Text>
+        <View style={{alignItems: 'center', padding: 30}}>
+          <Text style={{fontFamily: 'Montserrat-Bold', fontSize: 24, textAlign: 'center', color: '#1abc9c'}}>You must be a rescuer to have a patrol area.</Text>
+          <EvilIcon name="envelope" size={60} style={{marginTop: 30}}/>
+          <Text style={{textAlign: 'center', fontFamily: 'Montserrat-Regular', fontSize: 16}}>
+            Rescuer accounts will be notified when a help request is within the patrol area.
+          </Text>
+          <TouchableOpacity style={{padding: 10, backgroundColor: '#1abc9c', marginTop: 30}}>
+            <Text style={{fontFamily: 'Montserrat-Bold', fontSize: 20}}>Request to be a rescuer</Text>
+          </TouchableOpacity>
+        </View>
       )
     }
   }
@@ -137,7 +208,7 @@ export default class Profile extends Component {
           <UserPosts tabLabel="ios-paper">
             {this.renderPost(this.props.userpostsupdate)}
           </UserPosts>
-          <UserPosts tabLabel="ios-warning">
+          <UserPosts tabLabel="ios-help-buoy">
             {this.renderPost(this.props.userpostshelp)}
           </UserPosts>
           {/*
@@ -145,10 +216,8 @@ export default class Profile extends Component {
             {this.renderPlaces()}
           </Places>
           */}
-          <UserInfo tabLabel="ios-person" userData={this.props.userData}/>
-          {/*
-          <PatrolArea tabLabel="ios-pin" userData={this.props.userData} />
-          */}
+          <PatrolArea location={this.props.location} tabLabel="ios-pin" userDataSnap={this.props.userDataSnap} userData={this.props.userData} />
+          <UserInfo tabLabel="ios-person" userData={this.props.userData}  />
         </ScrollableTabView>
       </View>
     );
@@ -162,11 +231,12 @@ const styles = StyleSheet.create({
   userinfo: {
     alignItems: "center",
     marginTop: 20,
+    flexDirection: 'row',
   },
   userimage: {
-    height: 80,
-    width: 80,
-    borderRadius: 40,
+    height: 50,
+    width: 50,
+    borderRadius: 25,
     margin: 10,
   },
   username: {
@@ -186,6 +256,7 @@ const styles = StyleSheet.create({
     borderColor: "black",
     borderBottomWidth: 1,
     paddingBottom: 10,
+    backgroundColor: 'black'
   },
   tab: {
     alignItems: "center",
@@ -197,5 +268,14 @@ const styles = StyleSheet.create({
   },
   inactiveTab: {
     color: "gray",
-  }
+  },
+  map: {
+    ...StyleSheet.absoluteFillObject,
+  },
+  mapContainer: {
+    // ...StyleSheet.absoluteFillObject,
+    flex: 1,
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+  },
 });

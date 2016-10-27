@@ -26,6 +26,7 @@ import Checkbox from 'react-native-android-checkbox';
 // import BackgroundGeolocation from 'react-native-mauron85-background-geolocation';
 import { KalmamityDB } from '../../API/Firebase';
 import EvilIcon from 'react-native-vector-icons/EvilIcons';
+import SmsAndroid from 'react-native-sms-android';
 
 class PostAs extends Component {
 
@@ -35,6 +36,7 @@ class PostAs extends Component {
       text: '',
       height: 0,
       textInputValue: '',
+      checkBoxValue: false,
       imagePath: '',
     };
   }
@@ -75,42 +77,87 @@ class PostAs extends Component {
     })
   }
 
+  isGlobe(number) {
+    var digits = number[1] + '' + number[2];
+    if (digits == 5 || digits == 6 || digits == 15 ||
+      digits == 16 || digits == 17 || digits == 26 ||
+      digits == 27 || digits == 35 || digits == 36 ||
+      digits == 45 || digits == 75 || digits == 94 ||
+      digits == 95 || digits == 96 || digits == 97 ||
+      digits == 76 || digits == 77 || digits == 78 ||
+      digits == 79 || digits == 37)
+      return true;
+    else
+      return false;
+  }
+
   handlePost() {
-    KalmamityDB.ref('posts/' + this.props.posttype).push({
-      text: this.state.text,
-      username: this.props.userData.name,
-      useremail: this.props.userData.email,
-      time: Date.now(),
-      lon: this.props.location.longitude,
-      lat: this.props.location.latitude,
-      comments: '',
-    }, (error) => {
-      if (error) {
-        alert("Something unexpected happen.");
-      } else {
 
-        fetch('https://facebook.github.io/react-native/docs/network.html', {
-          method: 'POST',
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            text: this.state.text,
-            username: this.props.userData.name,
-            useremail: this.props.userData.email,
-            time: Date.now(),
-            lon: this.props.location.longitude,
-            lat: this.props.location.latitude,
-          })
-        });
+    if (this.state.checkBoxValue == true) {
+      var sendTo = this.isGlobe(this.props.userData.contactNo) == true ? '21589965' : '29290589965';
+      SmsAndroid.sms(
+        sendTo, // phone number to send sms to
+        this.state.text, // sms body
+        'sendDirect', // sendDirect or sendIndirect
+        (err, message) => {
+          if (err){
+            console.log("error");
+          } else {
+            console.log(message); // callback message
+          }
+        }
+      );
+      Actions.pop();
+    }
 
-        // handle is posting here
-        
+    else {
+      KalmamityDB.ref('posts/' + this.props.posttype).push({
+        text: this.state.text,
+        username: this.props.userData.name,
+        useremail: this.props.userData.email,
+        time: Date.now(),
+        lon: this.props.location.longitude,
+        lat: this.props.location.latitude,
+        // comments: '',
+      }, (error) => {
+        if (error) {
+          alert("Something unexpected happen.");
+        } else {
 
-        Actions.pop();
-      }
-    });
+
+          if (this.props.posttype == 'help') {
+            fetch('http://mambacodes.hol.es/KalmamityServer/receiveHelpFromNet/', {
+              method: 'GET',
+              headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                message: this.state.text,
+                number: this.props.userData.name,
+                lon: this.props.location.longitude,
+                lat: this.props.location.latitude,
+              })
+            }).then((response) => console.log(JSON.stringify(response)))
+              .then((responseText) => {
+                console.log(JSON.stringify(responseText));
+            })
+              .catch((error) => {
+                console.log(JSON.stringify(error));
+            }).done();
+
+              alert('HELP REQUEST SENT');
+          
+          }
+
+          // handle is posting here
+          
+
+          Actions.pop();
+        }
+      });
+    }
+
   }
 
   render() {
