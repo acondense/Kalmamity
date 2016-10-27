@@ -37,6 +37,7 @@ export default class WhatIsARescuer extends Component {
               The user who sent the help request will receive the contact of the rescuer, as well as the rescuer will receive the contact of the user.
             </Text>
 
+
           </View>
         </View>
       </ScrollView>
